@@ -217,5 +217,3 @@ hangman(choose_word(load_words()))
 * After each guess, you should display to the user the
   partially guessed word so far.
 """
-
-# test edit
