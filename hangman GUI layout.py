@@ -71,13 +71,13 @@ availabe_letters_label.grid(row=2, column=0)
 letters_frame.grid(row=3, column=0)
 
 # create and grid letter buttons
-button_content = button = tk.Button(master=letters_frame,
-                                    relief=tk.RAISED,
-                                    borderwidth=5,
-                                    font="Helvetica 30 bold",
-                                    bg="aqua",
-                                    command=letterPress
-                                    )
+# TODO put all buttons on screen
+button_content = tk.Button(master=letters_frame,
+                           relief=tk.RAISED,
+                           borderwidth=5,
+                           font="Helvetica 30 bold"
+                           # TODO padding in grid?
+                           )
 button_a = button_content
 button_b = button_content
 # button_c = button_content
@@ -132,8 +132,8 @@ button_b["text"] = "b"
 # button_y["text"] = "y"
 # button_z["text"] = "z"
 
-button_a.grid(row=0, column=0, padx=10, pady=10)
-button_b.grid(row=0, column=1, padx=10, pady=10)
+button_a.grid(row=1, column=0, padx=10, pady=10)
+button_b.grid(row=1, column=1, padx=10, pady=10)
 # button_c.grid(row=0, column=2, padx=10, pady=10)
 # button_d.grid(row=0, column=3, padx=10, pady=10)
 # button_e.grid(row=0, column=4, padx=10, pady=10)
@@ -160,5 +160,6 @@ button_b.grid(row=0, column=1, padx=10, pady=10)
 # button_z.grid(row=2, column=8, padx=10, pady=10)
 
 # TODO deactivate buttons when pressed
+# tk.event.widget to call widget that set off event
 
 window.mainloop()
