@@ -7,6 +7,8 @@ Created on Fri Sep 17 17:41:29 2021
 
 import tkinter as tk
 from PIL import ImageTk, Image
+import random
+import string
 
 
 def letterPressA():
@@ -191,15 +193,43 @@ def letterPressZ():
     dialogue_label["text"] = "You have selected the letter z"
 
 
+def load_words():
+    """
+    Returns a list of valid words. Words are strings of lowercase letters.
+    Depending on the size of the word list, this function may take a while to finish.
+    """
+    print("Loading word list from file...")
+    # inFile: file
+    inFile = open(WORDLIST_FILENAME, 'r')
+    # line: string
+    line = inFile.readline()
+    # wordlist: list of strings
+    wordlist = line.split()
+    print("  ", len(wordlist), "words loaded.")
+    return wordlist
+
+
+def choose_word(wordlist):
+    """
+    assumes wordlist is a list of strings, representing words
+    Returns a word from wordlist at random
+    """
+    return random.choice(wordlist)
+
+# create master window
 window = tk.Tk()
 window.title("hangman layout")
 window.columnconfigure(0, weight=1, minsize=75)
 window.columnconfigure(1, weight=1, minsize=75)
 window.rowconfigure(0, weight=1, minsize=50)
-
-# TODO add icon image
 icon_photo = ImageTk.PhotoImage(Image.open("hangman icon.jpg"))
 window.iconphoto(False, icon_photo)
+
+# initialize gameplay variables
+WORDLIST_FILENAME = "words.txt"
+secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
+secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
+guesses_remaining = tk.IntVar(master=window, value=6)
 
 # create widgets
 frame_left = tk.Frame(master=window)
@@ -211,7 +241,7 @@ hangman_img_label = tk.Label(master=frame_left,
                              width=500,
                              height=800,)
 word_label = tk.Label(master=frame_left,
-                      text="_ _ _ _ _",
+                      text="_ "*secret_word_lenght.get(),
                       font="Helvetica 25 bold italic")
 guesses_label = tk.Label(master=frame_left,
                          text="you have 6 guesses left",
@@ -223,8 +253,9 @@ welcome_label = tk.Label(master=frame_right,
                          font="Helvetica 70 bold",
                          width=20,
                          height=2)
+intro_dialogue = f"Loading word list from file...\nI am thinking of a word that is {secret_word_lenght.get()} letters long."
 dialogue_label = tk.Label(master=frame_right,
-                          text="this is where dialogue goes",
+                          text=intro_dialogue,
                           font="Helvetica 30",
                           borderwidth=5,
                           relief=tk.SUNKEN,
