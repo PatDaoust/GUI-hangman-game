@@ -198,9 +198,11 @@ window.columnconfigure(1, weight=1, minsize=75)
 window.rowconfigure(0, weight=1, minsize=50)
 
 # TODO add icon image
+icon_photo = ImageTk.PhotoImage(Image.open("hangman icon.jpg"))
+window.iconphoto(False, icon_photo)
 
 # create widgets
-frame_left = tk.Frame(master=window)  # TODO try adjusting frame size to fix lettering
+frame_left = tk.Frame(master=window)
 hangman_images = Image.open("hangman6Guesses.jpg")
 hangman_images = hangman_images.resize((500, 800), Image.NEAREST)
 hangman_images = ImageTk.PhotoImage(hangman_images)
@@ -210,10 +212,10 @@ hangman_img_label = tk.Label(master=frame_left,
                              height=800,)
 word_label = tk.Label(master=frame_left,
                       text="_ _ _ _ _",
-                      font="Helvetica 30 bold italic")
+                      font="Helvetica 25 bold italic")
 guesses_label = tk.Label(master=frame_left,
                          text="you have 6 guesses left",
-                         font="Helvetica 30")
+                         font="Helvetica 25")
 
 frame_right = tk.Frame(master=window)
 welcome_label = tk.Label(master=frame_right,
@@ -228,6 +230,7 @@ dialogue_label = tk.Label(master=frame_right,
                           relief=tk.SUNKEN,
                           width=40,
                           height=3)
+# TODO setup dialogue box to show current dialogue in black, previous dialogue in gray
 availabe_letters_label = tk.Label(master=frame_right,
                                   text="available letters",
                                   font="Helvetica 20 italic")
@@ -246,7 +249,6 @@ availabe_letters_label.grid(row=2, column=0)
 letters_frame.grid(row=3, column=0)
 
 # create and grid letter buttons
-# TODO put all buttons on screen
 button_a = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
                      borderwidth=5,
