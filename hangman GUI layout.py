@@ -78,8 +78,20 @@ button_content = tk.Button(master=letters_frame,
                            font="Helvetica 30 bold"
                            # TODO padding in grid?
                            )
-button_a = button_content
-button_b = button_content
+button_a = tk.Button(master=letters_frame,
+                            relief=tk.RAISED,
+                            borderwidth=5,
+                            font="Helvetica 30 bold",
+                            text="a"
+                            # TODO padding in grid?
+                            )
+button_b = tk.Button(master=letters_frame,
+                           relief=tk.RAISED,
+                           borderwidth=5,
+                           font="Helvetica 30 bold",
+                           text="b"
+                           # TODO padding in grid?
+                           )
 # button_c = button_content
 # button_d = button_content
 # button_e = button_content
@@ -132,8 +144,8 @@ button_b["text"] = "b"
 # button_y["text"] = "y"
 # button_z["text"] = "z"
 
-button_a.grid(row=1, column=0, padx=10, pady=10)
-button_b.grid(row=1, column=1, padx=10, pady=10)
+button_a.grid(row=0, column=0, padx=10, pady=10)
+button_b.grid(row=0, column=1, padx=10, pady=10)
 # button_c.grid(row=0, column=2, padx=10, pady=10)
 # button_d.grid(row=0, column=3, padx=10, pady=10)
 # button_e.grid(row=0, column=4, padx=10, pady=10)
