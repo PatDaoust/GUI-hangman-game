@@ -16,6 +16,10 @@ def letterPressA():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter a"
+    print(letters_guessed.get())
+    letters_guessed.set(letters_guessed.get() + "a")
+    print(letters_guessed.get())
+    # TODO check if word guessed w/letter
 
 
 def letterPressB():
@@ -216,6 +220,27 @@ def choose_word(wordlist):
     """
     return random.choice(wordlist)
 
+
+def is_word_guessed(secret_word, letters_guessed):
+    '''
+    assumes secret word is a string, representing the word the user is guessing
+    and that all the letters are lowercase
+    assumes letters_guessed is a list individual lowercase letters
+    returns a boolean, True if all the letters of secret_word are in letters_guessed;
+      False otherwise
+    '''
+    shared_characters = ""
+    # filled out shared_characters string
+    for char in secret_word:
+        if char in letters_guessed:
+            shared_characters = shared_characters + char
+    # compare strings
+    if shared_characters == secret_word:
+        return True
+    else:
+        return False
+
+
 # create master window
 window = tk.Tk()
 window.title("hangman layout")
@@ -225,11 +250,13 @@ window.rowconfigure(0, weight=1, minsize=50)
 icon_photo = ImageTk.PhotoImage(Image.open("hangman icon.jpg"))
 window.iconphoto(False, icon_photo)
 
+
 # initialize gameplay variables
 WORDLIST_FILENAME = "words.txt"
 secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
 secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
 guesses_remaining = tk.IntVar(master=window, value=6)
+letters_guessed = tk.StringVar(master=window, value="letters")
 
 # create widgets
 frame_left = tk.Frame(master=window)
