@@ -24,9 +24,9 @@ def letterPressA():
         win_game()
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
         if guesses_remaining.get() <= 0:
             lose_game()
-    # TODO test LetterPressA with word "a" and "aaaaa"
 
 
 # TODO copy letterPress content to other 25 letters
@@ -35,6 +35,18 @@ def letterPressB():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter b"
+    button_b["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "b")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressC():
@@ -42,6 +54,18 @@ def letterPressC():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter c"
+    button_c["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "c")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressD():
@@ -49,6 +73,18 @@ def letterPressD():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter d"
+    button_d["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "d")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressE():
@@ -56,6 +92,18 @@ def letterPressE():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter e"
+    button_e["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "e")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressF():
@@ -63,6 +111,18 @@ def letterPressF():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter f"
+    button_f["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "f")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressG():
@@ -70,6 +130,18 @@ def letterPressG():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter g"
+    button_g["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "g")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressH():
@@ -77,6 +149,18 @@ def letterPressH():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter h"
+    button_h["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "h")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressI():
@@ -84,6 +168,18 @@ def letterPressI():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter i"
+    button_i["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "i")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressJ():
@@ -91,6 +187,18 @@ def letterPressJ():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter j"
+    button_j["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "j")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressK():
@@ -98,6 +206,18 @@ def letterPressK():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter k"
+    button_k["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "k")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressL():
@@ -105,6 +225,18 @@ def letterPressL():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter l"
+    button_l["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "l")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressM():
@@ -112,6 +244,18 @@ def letterPressM():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter m"
+    button_m["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "m")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressN():
@@ -119,6 +263,18 @@ def letterPressN():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter n"
+    button_n["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "n")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressO():
@@ -126,6 +282,18 @@ def letterPressO():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter o"
+    button_o["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "o")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressP():
@@ -133,6 +301,18 @@ def letterPressP():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter p"
+    button_p["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "p")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressQ():
@@ -140,6 +320,18 @@ def letterPressQ():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter q"
+    button_q["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "q")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressR():
@@ -147,6 +339,18 @@ def letterPressR():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter r"
+    button_r["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "r")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressS():
@@ -154,6 +358,18 @@ def letterPressS():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter s"
+    button_s["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "s")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressT():
@@ -161,6 +377,18 @@ def letterPressT():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter t"
+    button_t["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "t")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressU():
@@ -168,6 +396,18 @@ def letterPressU():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter u"
+    button_u["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "u")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressV():
@@ -175,6 +415,18 @@ def letterPressV():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter v"
+    button_v["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "v")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressW():
@@ -182,6 +434,18 @@ def letterPressW():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter w"
+    button_w["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "w")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressX():
@@ -189,6 +453,18 @@ def letterPressX():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter x"
+    button_x["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "x")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressY():
@@ -196,6 +472,18 @@ def letterPressY():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter y"
+    button_y["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "y")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def letterPressZ():
@@ -203,6 +491,18 @@ def letterPressZ():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter z"
+    button_z["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + "z")
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if guesses_remaining.get() <= 0:
+            lose_game()
 
 
 def load_words():
@@ -261,6 +561,7 @@ def win_game():
     score = guesses_remaining.get() * secret_word_lenght.get()
     dialogue_label["text"] = f"Congratulations, you won!\nYour total score for this game is: {score}"
     # TODO end game
+    # TODO change picture to celebratory baloons?
 
 
 def get_guessed_word():
@@ -308,7 +609,7 @@ window.iconphoto(False, icon_photo)
 # initialize gameplay variables
 WORDLIST_FILENAME = "words.txt"
 # secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
-secret_word = tk.StringVar(master=window, value="aaaa")  # TODO change for tests
+secret_word = tk.StringVar(master=window, value="ab")  # TODO change for tests
 secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
 guesses_remaining = tk.IntVar(master=window, value=6)
 letters_guessed = tk.StringVar(master=window, value="")
@@ -344,7 +645,7 @@ dialogue_label = tk.Label(master=frame_right,
                           relief=tk.SUNKEN,
                           width=40,
                           height=3)
-# TODO setup dialogue box to show current dialogue in black, previous dialogue in gray
+# TODO setup dialogue box to show current dialogue in black, previous dialogue in gray. larger box needed? use scrooling box with 3 lines of visible text?
 availabe_letters_label = tk.Label(master=frame_right,
                                   text="available letters",
                                   font="Helvetica 20 italic")
