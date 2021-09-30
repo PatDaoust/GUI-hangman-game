@@ -16,10 +16,10 @@ def letterPressA():
     submits the letter to the game
     """
     dialogue_label["text"] = "You have selected the letter a"
-    print(letters_guessed.get())
+    button_a["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "a")
-    print(letters_guessed.get())
-    # TODO check if word guessed w/letter
+    word_is_guessed.set(is_word_guessed(secret_word.get(), letters_guessed.get()))
+    # TODO plan gameplay using next_round etc
 
 
 def letterPressB():
@@ -256,7 +256,8 @@ WORDLIST_FILENAME = "words.txt"
 secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
 secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
 guesses_remaining = tk.IntVar(master=window, value=6)
-letters_guessed = tk.StringVar(master=window, value="letters")
+letters_guessed = tk.StringVar(master=window, value="")
+word_is_guessed = tk.BooleanVar(master=window, value=False)
 
 # create widgets
 frame_left = tk.Frame(master=window)
@@ -312,6 +313,7 @@ button_a = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="a",
+                     disabledforeground="#D0D4D6",
                      command=letterPressA
                      )
 button_b = tk.Button(master=letters_frame,
@@ -319,6 +321,7 @@ button_b = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="b",
+                     disabledforeground="#D0D4D6",
                      command=letterPressB
                      )
 button_c = tk.Button(master=letters_frame,
@@ -326,6 +329,7 @@ button_c = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="c",
+                     disabledforeground="#D0D4D6",
                      command=letterPressC
                      )
 button_d = tk.Button(master=letters_frame,
@@ -333,6 +337,7 @@ button_d = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="d",
+                     disabledforeground="#D0D4D6",
                      command=letterPressD
                      )
 button_e = tk.Button(master=letters_frame,
@@ -340,6 +345,7 @@ button_e = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="e",
+                     disabledforeground="#D0D4D6",
                      command=letterPressE
                      )
 button_f = tk.Button(master=letters_frame,
@@ -347,6 +353,7 @@ button_f = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="f",
+                     disabledforeground="#D0D4D6",
                      command=letterPressF
                      )
 button_g = tk.Button(master=letters_frame,
@@ -354,6 +361,7 @@ button_g = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="g",
+                     disabledforeground="#D0D4D6",
                      command=letterPressG
                      )
 button_h = tk.Button(master=letters_frame,
@@ -361,6 +369,7 @@ button_h = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="h",
+                     disabledforeground="#D0D4D6",
                      command=letterPressH
                      )
 button_i = tk.Button(master=letters_frame,
@@ -368,6 +377,7 @@ button_i = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="i",
+                     disabledforeground="#D0D4D6",
                      command=letterPressI
                      )
 button_j = tk.Button(master=letters_frame,
@@ -375,6 +385,7 @@ button_j = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="j",
+                     disabledforeground="#D0D4D6",
                      command=letterPressJ
                      )
 button_k = tk.Button(master=letters_frame,
@@ -382,6 +393,7 @@ button_k = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="k",
+                     disabledforeground="#D0D4D6",
                      command=letterPressK
                      )
 button_l = tk.Button(master=letters_frame,
@@ -389,6 +401,7 @@ button_l = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="l",
+                     disabledforeground="#D0D4D6",
                      command=letterPressL
                      )
 button_m = tk.Button(master=letters_frame,
@@ -396,6 +409,7 @@ button_m = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="m",
+                     disabledforeground="#D0D4D6",
                      command=letterPressM
                      )
 button_n = tk.Button(master=letters_frame,
@@ -403,6 +417,7 @@ button_n = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="n",
+                     disabledforeground="#D0D4D6",
                      command=letterPressN
                      )
 button_o = tk.Button(master=letters_frame,
@@ -410,6 +425,7 @@ button_o = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="o",
+                     disabledforeground="#D0D4D6",
                      command=letterPressO
                      )
 button_p = tk.Button(master=letters_frame,
@@ -417,6 +433,7 @@ button_p = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="p",
+                     disabledforeground="#D0D4D6",
                      command=letterPressP
                      )
 button_q = tk.Button(master=letters_frame,
@@ -424,6 +441,7 @@ button_q = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="q",
+                     disabledforeground="#D0D4D6",
                      command=letterPressQ
                      )
 button_r = tk.Button(master=letters_frame,
@@ -431,6 +449,7 @@ button_r = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="r",
+                     disabledforeground="#D0D4D6",
                      command=letterPressR
                      )
 button_s = tk.Button(master=letters_frame,
@@ -438,6 +457,7 @@ button_s = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="s",
+                     disabledforeground="#D0D4D6",
                      command=letterPressS
                      )
 button_t = tk.Button(master=letters_frame,
@@ -445,6 +465,7 @@ button_t = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="t",
+                     disabledforeground="#D0D4D6",
                      command=letterPressT
                      )
 button_u = tk.Button(master=letters_frame,
@@ -452,6 +473,7 @@ button_u = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="u",
+                     disabledforeground="#D0D4D6",
                      command=letterPressU
                      )
 button_v = tk.Button(master=letters_frame,
@@ -459,6 +481,7 @@ button_v = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="v",
+                     disabledforeground="#D0D4D6",
                      command=letterPressV
                      )
 button_w = tk.Button(master=letters_frame,
@@ -466,6 +489,7 @@ button_w = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="w",
+                     disabledforeground="#D0D4D6",
                      command=letterPressW
                      )
 button_x = tk.Button(master=letters_frame,
@@ -473,6 +497,7 @@ button_x = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="x",
+                     disabledforeground="#D0D4D6",
                      command=letterPressX
                      )
 button_y = tk.Button(master=letters_frame,
@@ -480,6 +505,7 @@ button_y = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="y",
+                     disabledforeground="#D0D4D6",
                      command=letterPressY
                      )
 button_z = tk.Button(master=letters_frame,
@@ -487,6 +513,7 @@ button_z = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="z",
+                     disabledforeground="#D0D4D6",
                      command=letterPressZ
                      )
 
@@ -517,7 +544,7 @@ button_x.grid(row=2, column=6, padx=10, pady=10)
 button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
 
-# TODO deactivate buttons when pressed
+# TODO deactivate color more faded
 # tk.event.widget to call widget that set off event
 
 window.mainloop()
