@@ -17,19 +17,15 @@ def letterPressA():
     dialogue_label["text"] = "You have selected the letter a"
     button_a["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "a")
-    word_is_guessed.set(is_word_guessed(secret_word.get(), letters_guessed.get()))
-    # TODO plan gameplay using next_round etc
-    # nextround()
-    #     update guesses_remaining
-    #     update guessed_word on screen
-    #     allow user input
-    # did_win = is_word_guessed()
-    # if did_win:
-    #     win_game()
-    # else:
-    #     guesses_remaining -= 1
-    #     if guesses_remaining <= 0:
-    #         loose_game()
+    word_is_guessed.set(is_word_guessed())
+    next_round()
+    did_win = is_word_guessed()
+    if did_win:
+        win_game()
+    else:
+        guesses_remaining.set(guesses_remaining.get()-1)
+        if guesses_remaining.get() <= 0:
+            lose_game()
     # TODO test LetterPressA with word "a" and "aaaaa"
 
 
@@ -233,24 +229,70 @@ def choose_word(wordlist):
     return random.choice(wordlist)
 
 
-def is_word_guessed(secret_word, letters_guessed):
+def is_word_guessed():
     '''
     assumes secret word is a string, representing the word the user is guessing
     and that all the letters are lowercase
-    assumes letters_guessed is a list individual lowercase letters
+    assumes letters_guessed is a string individual lowercase letters
     returns a boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
     shared_characters = ""
     # filled out shared_characters string
-    for char in secret_word:
-        if char in letters_guessed:
+    for char in secret_word.get():
+        if char in letters_guessed.get():
             shared_characters = shared_characters + char
-    # compare strings
-    if shared_characters == secret_word:
+    # compare
+    if shared_characters == secret_word.get():
         return True
     else:
         return False
+
+
+def lose_game():
+    """run to generate losing end game code, when guesses_remaining==0"""
+    dialogue_label["text"] = f"Sorry, you ran out of guesses. The word was {secret_word.get()}."
+    # TODO end game
+
+
+def win_game():
+    """run to generate wining end game code,
+    when is_word_guessed(secret_word, letters_guessed) returns True"""
+    score = guesses_remaining.get() * secret_word_lenght.get()
+    dialogue_label["text"] = f"Congratulations, you won!\nYour total score for this game is: {score}"
+    # TODO end game
+
+
+def get_guessed_word():
+    '''
+    updates word_label's text, representing the guess so far with the letters that have
+    been guessed, and a underscore space (_ ) for the unguessed letters
+    '''
+    guessed_word_list = ["_ "]*len(secret_word.get())
+    # replaced guessed letters into list
+    var_index = 0
+    for char in secret_word.get():
+        if char in letters_guessed.get():
+            guessed_word_list[var_index] = char
+            var_index += 1
+        else:
+            var_index += 1
+    # convert list to string
+    guessed_word = ""
+    for ele in guessed_word_list:
+        guessed_word += ele
+    word_label["text"] = guessed_word
+
+
+def next_round():
+    """
+    assumes guesses_remaining is an int
+    assumes secret_word is a string
+    assumes letters_guessed is a list of characters
+    plays out a standard round.
+    updates guessed_letter"""
+    get_guessed_word()
+    dialogue_label["text"] = "Please guess your next letter."
 
 
 # create master window
@@ -265,7 +307,8 @@ window.iconphoto(False, icon_photo)
 
 # initialize gameplay variables
 WORDLIST_FILENAME = "words.txt"
-secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
+# secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
+secret_word = tk.StringVar(master=window, value="aaaa")  # TODO change for tests
 secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
 guesses_remaining = tk.IntVar(master=window, value=6)
 letters_guessed = tk.StringVar(master=window, value="")
