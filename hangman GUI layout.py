@@ -544,7 +544,6 @@ button_x.grid(row=2, column=6, padx=10, pady=10)
 button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
 
-# TODO deactivate color more faded
 # tk.event.widget to call widget that set off event
 
 window.mainloop()
