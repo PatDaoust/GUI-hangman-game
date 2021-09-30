@@ -8,7 +8,6 @@ Created on Fri Sep 17 17:41:29 2021
 import tkinter as tk
 from PIL import ImageTk, Image
 import random
-import string
 
 
 def letterPressA():
@@ -20,8 +19,21 @@ def letterPressA():
     letters_guessed.set(letters_guessed.get() + "a")
     word_is_guessed.set(is_word_guessed(secret_word.get(), letters_guessed.get()))
     # TODO plan gameplay using next_round etc
+    # nextround()
+    #     update guesses_remaining
+    #     update guessed_word on screen
+    #     allow user input
+    # did_win = is_word_guessed()
+    # if did_win:
+    #     win_game()
+    # else:
+    #     guesses_remaining -= 1
+    #     if guesses_remaining <= 0:
+    #         loose_game()
+    # TODO test LetterPressA with word "a" and "aaaaa"
 
 
+# TODO copy letterPress content to other 25 letters
 def letterPressB():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
