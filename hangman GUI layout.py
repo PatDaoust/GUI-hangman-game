@@ -25,11 +25,11 @@ def letterPressA():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
 
-# TODO copy letterPress content to other 25 letters
 def letterPressB():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
@@ -45,6 +45,7 @@ def letterPressB():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -64,6 +65,7 @@ def letterPressC():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -83,6 +85,7 @@ def letterPressD():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -102,6 +105,7 @@ def letterPressE():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -121,6 +125,7 @@ def letterPressF():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -140,6 +145,7 @@ def letterPressG():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -159,6 +165,7 @@ def letterPressH():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -178,6 +185,7 @@ def letterPressI():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -197,6 +205,7 @@ def letterPressJ():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -216,6 +225,7 @@ def letterPressK():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -235,6 +245,7 @@ def letterPressL():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -254,6 +265,7 @@ def letterPressM():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -273,6 +285,7 @@ def letterPressN():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -292,6 +305,7 @@ def letterPressO():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -311,6 +325,7 @@ def letterPressP():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -330,6 +345,7 @@ def letterPressQ():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -349,6 +365,7 @@ def letterPressR():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -368,6 +385,7 @@ def letterPressS():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -387,6 +405,7 @@ def letterPressT():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -406,6 +425,7 @@ def letterPressU():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -425,6 +445,7 @@ def letterPressV():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -444,6 +465,7 @@ def letterPressW():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -463,6 +485,7 @@ def letterPressX():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -482,6 +505,7 @@ def letterPressY():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -501,6 +525,7 @@ def letterPressZ():
     else:
         guesses_remaining.set(guesses_remaining.get()-1)
         guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        updatePicture()
         if guesses_remaining.get() <= 0:
             lose_game()
 
@@ -596,6 +621,16 @@ def next_round():
     dialogue_label["text"] = "Please guess your next letter."
 
 
+def updatePicture():
+    """updates the hangman_images based on guesses_remaining"""
+    # TODO write function to update pictures with each passing guess
+    # have ordered list_of_pictures (0th=full person, 6th=empty gallows)
+    images_list = [hangman_0, hangman_1, hangman_2, hangman_3, hangman_4, hangman_5, hangman_6]
+    # match guesses_remaining to index of list_of_pictures
+    # update picture
+    hangman_img_label["image"] = images_list[guesses_remaining.get()]
+
+
 # create master window
 window = tk.Tk()
 window.title("hangman layout")
@@ -617,11 +652,29 @@ word_is_guessed = tk.BooleanVar(master=window, value=False)
 
 # create widgets
 frame_left = tk.Frame(master=window)
-hangman_images = Image.open("hangman6Guesses.jpg")
-hangman_images = hangman_images.resize((500, 800), Image.NEAREST)
-hangman_images = ImageTk.PhotoImage(hangman_images)
+hangman_6 = Image.open("hangman6Guesses.jpg")
+hangman_6 = hangman_6.resize((500, 800), Image.NEAREST)
+hangman_6 = ImageTk.PhotoImage(hangman_6)
+hangman_5 = Image.open("hangman5Guesses.jpg")
+hangman_5 = hangman_5.resize((500, 800), Image.NEAREST)
+hangman_5 = ImageTk.PhotoImage(hangman_5)
+hangman_4 = Image.open("hangman4Guesses.jpg")
+hangman_4 = hangman_4.resize((500, 800), Image.NEAREST)
+hangman_4 = ImageTk.PhotoImage(hangman_4)
+hangman_3 = Image.open("hangman3Guesses.jpg")
+hangman_3 = hangman_3.resize((500, 800), Image.NEAREST)
+hangman_3 = ImageTk.PhotoImage(hangman_3)
+hangman_2 = Image.open("hangman2Guesses.jpg")
+hangman_2 = hangman_2.resize((500, 800), Image.NEAREST)
+hangman_2 = ImageTk.PhotoImage(hangman_2)
+hangman_1 = Image.open("hangman1Guesses.jpg")
+hangman_1 = hangman_1.resize((500, 800), Image.NEAREST)
+hangman_1 = ImageTk.PhotoImage(hangman_1)
+hangman_0 = Image.open("hangman0Guesses.jpg")
+hangman_0 = hangman_0.resize((500, 800), Image.NEAREST)
+hangman_0 = ImageTk.PhotoImage(hangman_0)
 hangman_img_label = tk.Label(master=frame_left,
-                             image=hangman_images,
+                             image=hangman_6,
                              width=500,
                              height=800,)
 word_label = tk.Label(master=frame_left,
