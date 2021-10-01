@@ -23,11 +23,14 @@ def letterPressA():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "a" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressB():
@@ -43,11 +46,14 @@ def letterPressB():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "b" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressC():
@@ -63,11 +69,14 @@ def letterPressC():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "c" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressD():
@@ -83,11 +92,14 @@ def letterPressD():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "d" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressE():
@@ -103,11 +115,14 @@ def letterPressE():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "e" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressF():
@@ -123,11 +138,14 @@ def letterPressF():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "f" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressG():
@@ -143,11 +161,14 @@ def letterPressG():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "g" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressH():
@@ -163,11 +184,14 @@ def letterPressH():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "h" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressI():
@@ -183,11 +207,14 @@ def letterPressI():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "i" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressJ():
@@ -203,11 +230,14 @@ def letterPressJ():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "j" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressK():
@@ -223,11 +253,14 @@ def letterPressK():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "k" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressL():
@@ -243,11 +276,14 @@ def letterPressL():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "l" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressM():
@@ -263,11 +299,14 @@ def letterPressM():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "m" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressN():
@@ -283,11 +322,14 @@ def letterPressN():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "n" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressO():
@@ -303,11 +345,14 @@ def letterPressO():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "o" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressP():
@@ -323,11 +368,14 @@ def letterPressP():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "p" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressQ():
@@ -343,11 +391,14 @@ def letterPressQ():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "q" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressR():
@@ -363,11 +414,14 @@ def letterPressR():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "r" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressS():
@@ -383,11 +437,14 @@ def letterPressS():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "s" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressT():
@@ -403,11 +460,14 @@ def letterPressT():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "t" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressU():
@@ -423,11 +483,14 @@ def letterPressU():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "u" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressV():
@@ -443,11 +506,14 @@ def letterPressV():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "v" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressW():
@@ -463,11 +529,14 @@ def letterPressW():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "w" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressX():
@@ -483,11 +552,14 @@ def letterPressX():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "x" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressY():
@@ -503,11 +575,14 @@ def letterPressY():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "y" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def letterPressZ():
@@ -523,11 +598,14 @@ def letterPressZ():
     if did_win:
         win_game()
     else:
-        guesses_remaining.set(guesses_remaining.get()-1)
-        guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+        if "z" in secret_word.get():
+            pass
+        else:
+            guesses_remaining.set(guesses_remaining.get()-1)
+            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+            if guesses_remaining.get() <= 0:
+                lose_game()
         updatePicture()
-        if guesses_remaining.get() <= 0:
-            lose_game()
 
 
 def load_words():
@@ -585,6 +663,10 @@ def win_game():
     when is_word_guessed(secret_word, letters_guessed) returns True"""
     score = guesses_remaining.get() * secret_word_lenght.get()
     dialogue_label["text"] = f"Congratulations, you won!\nYour total score for this game is: {score}"
+    balloons_image = Image.open("balloons.jpg")
+    balloons_image = balloons_image.resize((500, 800), Image.NEAREST)
+    balloons_image = ImageTk.PhotoImage(balloons_image)
+    hangman_img_label["image"] = balloons_image
     # TODO end game
     # TODO change picture to celebratory baloons?
 
@@ -623,11 +705,7 @@ def next_round():
 
 def updatePicture():
     """updates the hangman_images based on guesses_remaining"""
-    # TODO write function to update pictures with each passing guess
-    # have ordered list_of_pictures (0th=full person, 6th=empty gallows)
     images_list = [hangman_0, hangman_1, hangman_2, hangman_3, hangman_4, hangman_5, hangman_6]
-    # match guesses_remaining to index of list_of_pictures
-    # update picture
     hangman_img_label["image"] = images_list[guesses_remaining.get()]
 
 

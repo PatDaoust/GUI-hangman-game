@@ -196,8 +196,8 @@ def hangman(secret_word):
                 break
 
 
-# hangman("kittens")
-hangman(choose_word(load_words()))
+hangman("kittens")
+# hangman(choose_word(load_words()))
 
 # TODO writeup gameplay instructions
 """
