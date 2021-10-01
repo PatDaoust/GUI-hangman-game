@@ -652,10 +652,40 @@ def is_word_guessed():
         return False
 
 
+def endGame():
+    "deactivates all buttons, ending the game"
+    button_a["state"] = "disabled"
+    button_b["state"] = "disabled"
+    button_c["state"] = "disabled"
+    button_d["state"] = "disabled"
+    button_e["state"] = "disabled"
+    button_f["state"] = "disabled"
+    button_g["state"] = "disabled"
+    button_h["state"] = "disabled"
+    button_i["state"] = "disabled"
+    button_j["state"] = "disabled"
+    button_k["state"] = "disabled"
+    button_l["state"] = "disabled"
+    button_m["state"] = "disabled"
+    button_n["state"] = "disabled"
+    button_o["state"] = "disabled"
+    button_p["state"] = "disabled"
+    button_q["state"] = "disabled"
+    button_r["state"] = "disabled"
+    button_s["state"] = "disabled"
+    button_t["state"] = "disabled"
+    button_u["state"] = "disabled"
+    button_v["state"] = "disabled"
+    button_w["state"] = "disabled"
+    button_x["state"] = "disabled"
+    button_y["state"] = "disabled"
+    button_z["state"] = "disabled"
+
+
 def lose_game():
     """run to generate losing end game code, when guesses_remaining==0"""
     dialogue_label["text"] = f"Sorry, you ran out of guesses. The word was {secret_word.get()}."
-    # TODO end game
+    endGame()
 
 
 def win_game():
@@ -663,12 +693,8 @@ def win_game():
     when is_word_guessed(secret_word, letters_guessed) returns True"""
     score = guesses_remaining.get() * secret_word_lenght.get()
     dialogue_label["text"] = f"Congratulations, you won!\nYour total score for this game is: {score}"
-    balloons_image = Image.open("balloons.jpg")
-    balloons_image = balloons_image.resize((500, 800), Image.NEAREST)
-    balloons_image = ImageTk.PhotoImage(balloons_image)
     hangman_img_label["image"] = balloons_image
-    # TODO end game
-    # TODO change picture to celebratory baloons?
+    endGame()
 
 
 def get_guessed_word():
@@ -730,6 +756,9 @@ word_is_guessed = tk.BooleanVar(master=window, value=False)
 
 # create widgets
 frame_left = tk.Frame(master=window)
+balloons_image = Image.open("balloons3.jpg")
+balloons_image = balloons_image.resize((500, 800), Image.NEAREST)
+balloons_image = ImageTk.PhotoImage(balloons_image)
 hangman_6 = Image.open("hangman6Guesses.jpg")
 hangman_6 = hangman_6.resize((500, 800), Image.NEAREST)
 hangman_6 = ImageTk.PhotoImage(hangman_6)
@@ -1032,5 +1061,8 @@ button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
 
 # tk.event.widget to call widget that set off event
+# TODO reset button
+# TODO option to import own word list
+# TODO instructions for gameplay
 
 window.mainloop()
