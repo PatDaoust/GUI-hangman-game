@@ -14,7 +14,7 @@ def letterPressA():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter a"
+    updateDialogue("You have selected the letter a")
     button_a["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "a")
     word_is_guessed.set(is_word_guessed())
@@ -37,7 +37,7 @@ def letterPressB():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter b"
+    updateDialogue("You have selected the letter b")
     button_b["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "b")
     word_is_guessed.set(is_word_guessed())
@@ -60,7 +60,7 @@ def letterPressC():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter c"
+    updateDialogue("You have selected the letter c")
     button_c["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "c")
     word_is_guessed.set(is_word_guessed())
@@ -83,7 +83,7 @@ def letterPressD():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter d"
+    updateDialogue("You have selected the letter d")
     button_d["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "d")
     word_is_guessed.set(is_word_guessed())
@@ -106,7 +106,7 @@ def letterPressE():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter e"
+    updateDialogue("You have selected the letter e")
     button_e["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "e")
     word_is_guessed.set(is_word_guessed())
@@ -129,7 +129,7 @@ def letterPressF():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter f"
+    updateDialogue("You have selected the letter f")
     button_f["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "f")
     word_is_guessed.set(is_word_guessed())
@@ -152,7 +152,7 @@ def letterPressG():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter g"
+    updateDialogue("You have selected the letter g")
     button_g["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "g")
     word_is_guessed.set(is_word_guessed())
@@ -175,7 +175,7 @@ def letterPressH():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter h"
+    updateDialogue("You have selected the letter h")
     button_h["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "h")
     word_is_guessed.set(is_word_guessed())
@@ -198,7 +198,7 @@ def letterPressI():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter i"
+    updateDialogue("You have selected the letter i")
     button_i["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "i")
     word_is_guessed.set(is_word_guessed())
@@ -221,7 +221,7 @@ def letterPressJ():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter j"
+    updateDialogue("You have selected the letter j")
     button_j["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "j")
     word_is_guessed.set(is_word_guessed())
@@ -244,7 +244,7 @@ def letterPressK():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter k"
+    updateDialogue("You have selected the letter k")
     button_k["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "k")
     word_is_guessed.set(is_word_guessed())
@@ -267,7 +267,7 @@ def letterPressL():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter l"
+    updateDialogue("You have selected the letter l")
     button_l["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "l")
     word_is_guessed.set(is_word_guessed())
@@ -290,7 +290,7 @@ def letterPressM():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter m"
+    updateDialogue("You have selected the letter m")
     button_m["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "m")
     word_is_guessed.set(is_word_guessed())
@@ -313,7 +313,7 @@ def letterPressN():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter n"
+    updateDialogue("You have selected the letter n")
     button_n["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "n")
     word_is_guessed.set(is_word_guessed())
@@ -336,7 +336,7 @@ def letterPressO():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter o"
+    updateDialogue("You have selected the letter o")
     button_o["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "o")
     word_is_guessed.set(is_word_guessed())
@@ -359,7 +359,7 @@ def letterPressP():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter p"
+    updateDialogue("You have selected the letter p")
     button_p["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "p")
     word_is_guessed.set(is_word_guessed())
@@ -382,7 +382,7 @@ def letterPressQ():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter q"
+    updateDialogue("You have selected the letter q")
     button_q["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "q")
     word_is_guessed.set(is_word_guessed())
@@ -405,7 +405,7 @@ def letterPressR():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter r"
+    updateDialogue("You have selected the letter r")
     button_r["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "r")
     word_is_guessed.set(is_word_guessed())
@@ -428,7 +428,7 @@ def letterPressS():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter s"
+    updateDialogue("You have selected the letter s")
     button_s["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "s")
     word_is_guessed.set(is_word_guessed())
@@ -451,7 +451,7 @@ def letterPressT():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter t"
+    updateDialogue("You have selected the letter t")
     button_t["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "t")
     word_is_guessed.set(is_word_guessed())
@@ -474,7 +474,7 @@ def letterPressU():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter u"
+    updateDialogue("You have selected the letter u")
     button_u["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "u")
     word_is_guessed.set(is_word_guessed())
@@ -497,7 +497,7 @@ def letterPressV():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter v"
+    updateDialogue("You have selected the letter v")
     button_v["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "v")
     word_is_guessed.set(is_word_guessed())
@@ -520,7 +520,7 @@ def letterPressW():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter w"
+    updateDialogue("You have selected the letter w")
     button_w["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "w")
     word_is_guessed.set(is_word_guessed())
@@ -543,7 +543,7 @@ def letterPressX():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter x"
+    updateDialogue("You have selected the letterx ")
     button_x["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "x")
     word_is_guessed.set(is_word_guessed())
@@ -566,7 +566,7 @@ def letterPressY():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter y"
+    updateDialogue("You have selected the letter y")
     button_y["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "y")
     word_is_guessed.set(is_word_guessed())
@@ -589,7 +589,7 @@ def letterPressZ():
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    dialogue_label["text"] = "You have selected the letter z"
+    updateDialogue("You have selected the letter z")
     button_z["state"] = "disabled"
     letters_guessed.set(letters_guessed.get() + "z")
     word_is_guessed.set(is_word_guessed())
@@ -684,7 +684,7 @@ def endGame():
 
 def lose_game():
     """run to generate losing end game code, when guesses_remaining==0"""
-    dialogue_label["text"] = f"Sorry, you ran out of guesses. The word was {secret_word.get()}."
+    updateDialogue(f"Sorry, you ran out of guesses. \nThe word was {secret_word.get()}.")
     endGame()
 
 
@@ -692,7 +692,7 @@ def win_game():
     """run to generate wining end game code,
     when is_word_guessed(secret_word, letters_guessed) returns True"""
     score = guesses_remaining.get() * secret_word_lenght.get()
-    dialogue_label["text"] = f"Congratulations, you won!\nYour total score for this game is: {score}"
+    updateDialogue(f"Congratulations, you won!\nYour total score for this game is: {score}")
     hangman_img_label["image"] = balloons_image
     endGame()
 
@@ -726,13 +726,20 @@ def next_round():
     plays out a standard round.
     updates guessed_letter"""
     get_guessed_word()
-    dialogue_label["text"] = "Please guess your next letter."
+    updateDialogue("Please guess your next letter.")
 
 
 def updatePicture():
     """updates the hangman_images based on guesses_remaining"""
     images_list = [hangman_0, hangman_1, hangman_2, hangman_3, hangman_4, hangman_5, hangman_6]
     hangman_img_label["image"] = images_list[guesses_remaining.get()]
+
+
+def updateDialogue(new_text):
+    """updates the dialogue boxes, shifting the contents"""
+    dialogue_label_3["text"] = dialogue_label_2["text"]
+    dialogue_label_2["text"] = dialogue_label_1["text"]
+    dialogue_label_1["text"] = new_text
 
 
 # create master window
@@ -796,14 +803,28 @@ welcome_label = tk.Label(master=frame_right,
                          width=20,
                          height=2)
 intro_dialogue = f"Loading word list from file...\nI am thinking of a word that is {secret_word_lenght.get()} letters long."
-dialogue_label = tk.Label(master=frame_right,
-                          text=intro_dialogue,
-                          font="Helvetica 30",
-                          borderwidth=5,
-                          relief=tk.SUNKEN,
-                          width=40,
-                          height=3)
-# TODO
+dialogue_label_1 = tk.Label(master=frame_right,
+                            text=intro_dialogue,
+                            font="Helvetica 30",
+                            borderwidth=5,
+                            relief=tk.SUNKEN,
+                            width=40,
+                            height=2)
+dialogue_label_2 = tk.Label(master=frame_right,
+                            font="Helvetica 30",
+                            fg = "#D0D4D6",
+                            borderwidth=5,
+                            relief=tk.SUNKEN,
+                            width=40,
+                            height=2)
+dialogue_label_3 = tk.Label(master=frame_right,
+                            font="Helvetica 30",
+                            fg = "#D0D4D6",
+                            borderwidth=5,
+                            relief=tk.SUNKEN,
+                            width=40,
+                            height=2)
+# TODO change text color for 2 and 3
 # setup dialogue box to show current dialogue in black, previous dialogue in gray.
 # larger box needed? use scrooling box with 3 lines of visible text?
 availabe_letters_label = tk.Label(master=frame_right,
@@ -819,9 +840,11 @@ guesses_label.grid(row=2, column=0)
 
 frame_right.grid(row=0, column=1)
 welcome_label.grid(row=0, column=0, sticky="n")
-dialogue_label.grid(row=1, column=0)
-availabe_letters_label.grid(row=2, column=0)
-letters_frame.grid(row=3, column=0)
+dialogue_label_1.grid(row=3, column=0)
+dialogue_label_2.grid(row=2, column=0)
+dialogue_label_3.grid(row=1, column=0)
+availabe_letters_label.grid(row=4, column=0)
+letters_frame.grid(row=5, column=0)
 
 # create and grid letter buttons
 button_a = tk.Button(master=letters_frame,
