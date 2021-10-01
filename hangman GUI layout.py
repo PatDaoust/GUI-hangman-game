@@ -744,11 +744,9 @@ window.rowconfigure(0, weight=1, minsize=50)
 icon_photo = ImageTk.PhotoImage(Image.open("hangman icon.jpg"))
 window.iconphoto(False, icon_photo)
 
-
 # initialize gameplay variables
 WORDLIST_FILENAME = "words.txt"
-# secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
-secret_word = tk.StringVar(master=window, value="ab")  # TODO change for tests
+secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
 secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
 guesses_remaining = tk.IntVar(master=window, value=6)
 letters_guessed = tk.StringVar(master=window, value="")
@@ -805,7 +803,9 @@ dialogue_label = tk.Label(master=frame_right,
                           relief=tk.SUNKEN,
                           width=40,
                           height=3)
-# TODO setup dialogue box to show current dialogue in black, previous dialogue in gray. larger box needed? use scrooling box with 3 lines of visible text?
+# TODO
+# setup dialogue box to show current dialogue in black, previous dialogue in gray.
+# larger box needed? use scrooling box with 3 lines of visible text?
 availabe_letters_label = tk.Label(master=frame_right,
                                   text="available letters",
                                   font="Helvetica 20 italic")
