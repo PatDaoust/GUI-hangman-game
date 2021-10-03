@@ -788,9 +788,9 @@ word_is_guessed = tk.BooleanVar(master=window, value=False)
 
 # opening rules
 rules_text = """
-Your mission is the guess the word.
+Your mission is to guess the word.
 
-I will tell you the lenght of the word
+I will tell you the lenght of the word.
 You must press on the letters that you think are in the word.
 
 If you guess wrong, you are penalized one of your 6 guesses.
@@ -893,12 +893,12 @@ availabe_letters_label = tk.Label(master=frame_right,
 letters_frame = tk.Frame(master=frame_right)
 
 # grid widgets
-opening_frame.pack()
+opening_frame.grid(row=0, column=0, sticky="nsew")
 welcome_label_opening.pack()
 rules_label.pack()
 play_button.pack()
 opening_frame.tkraise(game_frame)
-game_frame.pack()
+game_frame.grid(row=0, column=0)
 
 frame_left.grid(row=0, column=0)
 hangman_img_label.grid(row=0, column=0)
@@ -1153,6 +1153,7 @@ button_z.grid(row=2, column=8, padx=10, pady=10)
 # TODO reset button
 # TODO option to import own word list
 # TODO instructions for gameplay
+# TODO write single letterPress() function, use lambda function on button command
 # TODO make .exe file to send out
 
 window.mainloop()
