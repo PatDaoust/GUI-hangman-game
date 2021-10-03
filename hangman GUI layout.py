@@ -764,25 +764,25 @@ frame_left = tk.Frame(master=window)
 balloons_image = Image.open("balloons3.jpg")
 balloons_image = balloons_image.resize((500, 800), Image.NEAREST)
 balloons_image = ImageTk.PhotoImage(balloons_image)
-hangman_6 = Image.open("hangman6Guesses.jpg")
+hangman_6 = Image.open("500x800 6guesses.jpg")
 hangman_6 = hangman_6.resize((500, 800), Image.NEAREST)
 hangman_6 = ImageTk.PhotoImage(hangman_6)
-hangman_5 = Image.open("hangman5Guesses.jpg")
+hangman_5 = Image.open("500x800 5guesses.jpg")
 hangman_5 = hangman_5.resize((500, 800), Image.NEAREST)
 hangman_5 = ImageTk.PhotoImage(hangman_5)
-hangman_4 = Image.open("hangman4Guesses.jpg")
+hangman_4 = Image.open("500x800 4guesses.jpg")
 hangman_4 = hangman_4.resize((500, 800), Image.NEAREST)
 hangman_4 = ImageTk.PhotoImage(hangman_4)
-hangman_3 = Image.open("hangman3Guesses.jpg")
+hangman_3 = Image.open("500x800 3guesses.jpg")
 hangman_3 = hangman_3.resize((500, 800), Image.NEAREST)
 hangman_3 = ImageTk.PhotoImage(hangman_3)
-hangman_2 = Image.open("hangman2Guesses.jpg")
+hangman_2 = Image.open("500x800 2guesses.jpg")
 hangman_2 = hangman_2.resize((500, 800), Image.NEAREST)
 hangman_2 = ImageTk.PhotoImage(hangman_2)
-hangman_1 = Image.open("hangman1Guesses.jpg")
+hangman_1 = Image.open("500x800 1guesses.jpg")
 hangman_1 = hangman_1.resize((500, 800), Image.NEAREST)
 hangman_1 = ImageTk.PhotoImage(hangman_1)
-hangman_0 = Image.open("hangman0Guesses.jpg")
+hangman_0 = Image.open("500x800 0guesses.jpg")
 hangman_0 = hangman_0.resize((500, 800), Image.NEAREST)
 hangman_0 = ImageTk.PhotoImage(hangman_0)
 hangman_img_label = tk.Label(master=frame_left,
@@ -812,21 +812,18 @@ dialogue_label_1 = tk.Label(master=frame_right,
                             height=2)
 dialogue_label_2 = tk.Label(master=frame_right,
                             font="Helvetica 30",
-                            fg = "#D0D4D6",
+                            fg="#D0D4D6",
                             borderwidth=5,
                             relief=tk.SUNKEN,
                             width=40,
                             height=2)
 dialogue_label_3 = tk.Label(master=frame_right,
                             font="Helvetica 30",
-                            fg = "#D0D4D6",
+                            fg="#D0D4D6",
                             borderwidth=5,
                             relief=tk.SUNKEN,
                             width=40,
                             height=2)
-# TODO change text color for 2 and 3
-# setup dialogue box to show current dialogue in black, previous dialogue in gray.
-# larger box needed? use scrooling box with 3 lines of visible text?
 availabe_letters_label = tk.Label(master=frame_right,
                                   text="available letters",
                                   font="Helvetica 20 italic")
@@ -1084,8 +1081,11 @@ button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
 
 # tk.event.widget to call widget that set off event
+# TODO fix window size
 # TODO reset button
 # TODO option to import own word list
 # TODO instructions for gameplay
+# TODO better images
+# TODO make .exe file to send out
 
 window.mainloop()
