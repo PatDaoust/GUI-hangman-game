@@ -198,22 +198,3 @@ def hangman(secret_word):
 
 hangman("kittens")
 # hangman(choose_word(load_words()))
-
-# TODO writeup gameplay instructions
-"""
-* At the start of the game, let the user know how many
-  letters the secret_word contains and how many guesses s/he starts with.
-* The user should start with 6 guesses
-
-* Before each round, you should display to the user how many guesses
-  s/he has left and the letters that the user has not yet guessed.
-
-* Ask the user to supply one guess per round. Remember to make
-  sure that the user puts in a letter!
-
-* The user should receive feedback immediately after each guess
-  about whether their guess appears in the computer's word.
-
-* After each guess, you should display to the user the
-  partially guessed word so far.
-"""

@@ -24,8 +24,9 @@ def letterPressA():
         win_game()
     else:
         if "a" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -47,8 +48,9 @@ def letterPressB():
         win_game()
     else:
         if "b" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -70,7 +72,7 @@ def letterPressC():
         win_game()
     else:
         if "c" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -93,7 +95,7 @@ def letterPressD():
         win_game()
     else:
         if "d" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -116,7 +118,7 @@ def letterPressE():
         win_game()
     else:
         if "e" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -139,7 +141,7 @@ def letterPressF():
         win_game()
     else:
         if "f" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -162,7 +164,7 @@ def letterPressG():
         win_game()
     else:
         if "g" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -185,7 +187,7 @@ def letterPressH():
         win_game()
     else:
         if "h" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -208,7 +210,7 @@ def letterPressI():
         win_game()
     else:
         if "i" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -231,7 +233,7 @@ def letterPressJ():
         win_game()
     else:
         if "j" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -254,7 +256,7 @@ def letterPressK():
         win_game()
     else:
         if "k" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -277,7 +279,7 @@ def letterPressL():
         win_game()
     else:
         if "l" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -300,7 +302,7 @@ def letterPressM():
         win_game()
     else:
         if "m" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -323,7 +325,7 @@ def letterPressN():
         win_game()
     else:
         if "n" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -346,7 +348,7 @@ def letterPressO():
         win_game()
     else:
         if "o" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -369,7 +371,7 @@ def letterPressP():
         win_game()
     else:
         if "p" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -392,7 +394,7 @@ def letterPressQ():
         win_game()
     else:
         if "q" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -415,7 +417,7 @@ def letterPressR():
         win_game()
     else:
         if "r" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -438,7 +440,7 @@ def letterPressS():
         win_game()
     else:
         if "s" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -461,7 +463,7 @@ def letterPressT():
         win_game()
     else:
         if "t" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -484,7 +486,7 @@ def letterPressU():
         win_game()
     else:
         if "u" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -507,7 +509,7 @@ def letterPressV():
         win_game()
     else:
         if "v" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -530,7 +532,7 @@ def letterPressW():
         win_game()
     else:
         if "w" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -553,7 +555,7 @@ def letterPressX():
         win_game()
     else:
         if "x" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -576,7 +578,7 @@ def letterPressY():
         win_game()
     else:
         if "y" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -599,7 +601,7 @@ def letterPressZ():
         win_game()
     else:
         if "z" in secret_word.get():
-            pass
+            updateDialogue("Good guess!")
         else:
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
@@ -753,7 +755,8 @@ window.iconphoto(False, icon_photo)
 
 # initialize gameplay variables
 WORDLIST_FILENAME = "words.txt"
-secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
+# secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
+secret_word = tk.StringVar(master=window, value="cats")  # TODO randomize
 secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
 guesses_remaining = tk.IntVar(master=window, value=6)
 letters_guessed = tk.StringVar(master=window, value="")
@@ -801,7 +804,7 @@ welcome_label = tk.Label(master=frame_right,
                          text="Welcome to Hangman!",
                          font="Helvetica 70 bold",
                          width=20,
-                         height=2)
+                         height=1)
 intro_dialogue = f"Loading word list from file...\nI am thinking of a word that is {secret_word_lenght.get()} letters long."
 dialogue_label_1 = tk.Label(master=frame_right,
                             text=intro_dialogue,
@@ -1080,12 +1083,9 @@ button_x.grid(row=2, column=6, padx=10, pady=10)
 button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
 
-# tk.event.widget to call widget that set off event
-# TODO fix window size
 # TODO reset button
 # TODO option to import own word list
 # TODO instructions for gameplay
-# TODO better images
 # TODO make .exe file to send out
 
 window.mainloop()
