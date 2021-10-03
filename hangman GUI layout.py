@@ -74,6 +74,7 @@ def letterPressC():
         if "c" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -97,6 +98,7 @@ def letterPressD():
         if "d" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -120,6 +122,7 @@ def letterPressE():
         if "e" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -143,6 +146,7 @@ def letterPressF():
         if "f" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -166,6 +170,7 @@ def letterPressG():
         if "g" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -189,6 +194,7 @@ def letterPressH():
         if "h" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -212,6 +218,7 @@ def letterPressI():
         if "i" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -235,6 +242,7 @@ def letterPressJ():
         if "j" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -258,6 +266,7 @@ def letterPressK():
         if "k" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -281,6 +290,7 @@ def letterPressL():
         if "l" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -304,6 +314,7 @@ def letterPressM():
         if "m" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -327,6 +338,7 @@ def letterPressN():
         if "n" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -350,6 +362,7 @@ def letterPressO():
         if "o" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -373,6 +386,7 @@ def letterPressP():
         if "p" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -396,6 +410,7 @@ def letterPressQ():
         if "q" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -419,6 +434,7 @@ def letterPressR():
         if "r" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -442,6 +458,7 @@ def letterPressS():
         if "s" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -465,6 +482,7 @@ def letterPressT():
         if "t" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -488,6 +506,7 @@ def letterPressU():
         if "u" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -511,6 +530,7 @@ def letterPressV():
         if "v" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -534,6 +554,7 @@ def letterPressW():
         if "w" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -557,6 +578,7 @@ def letterPressX():
         if "x" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -580,6 +602,7 @@ def letterPressY():
         if "y" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -603,6 +626,7 @@ def letterPressZ():
         if "z" in secret_word.get():
             updateDialogue("Good guess!")
         else:
+            updateDialogue("Bad guess. You've been penalized a guess")
             guesses_remaining.set(guesses_remaining.get()-1)
             guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
             if guesses_remaining.get() <= 0:
@@ -762,8 +786,44 @@ guesses_remaining = tk.IntVar(master=window, value=6)
 letters_guessed = tk.StringVar(master=window, value="")
 word_is_guessed = tk.BooleanVar(master=window, value=False)
 
+# opening rules
+rules_text = """
+Your mission is the guess the word.
+
+I will tell you the lenght of the word
+You must press on the letters that you think are in the word.
+
+If you guess wrong, you are penalized one of your 6 guesses.
+The letters will conviniently turn themselves off after you press them.
+
+At the end of the game, you will recieve a score.
+The less guesses you use up, the higher your score will be.
+"""
+opening_frame = tk.Frame(master=window)
+welcome_label_opening = tk.Label(master=opening_frame,
+                                 text="Welcome to Hangman!",
+                                 font="Helvetica 70 bold",
+                                 width=20,
+                                 height=1)
+rules_label = tk.Label(master=opening_frame,
+                       text=rules_text,
+                       font="Helvetica 30"
+                       )
+play_button = tk.Button(master=opening_frame,
+                        text="Let's play",
+                        font="Helvetica 30",
+                        relief=tk.RAISED,
+                        borderwidth=5,
+                        command=opening_frame.destroy
+                        )
+opening_frame.tkraise()
+# TODO put other frames in game frame
+# TODO start game with opening frame, close when click "lets play"
+# TODO place frames
+
 # create widgets
-frame_left = tk.Frame(master=window)
+game_frame = tk.Frame(master=window)
+frame_left = tk.Frame(master=game_frame)
 balloons_image = Image.open("balloons3.jpg")
 balloons_image = balloons_image.resize((500, 800), Image.NEAREST)
 balloons_image = ImageTk.PhotoImage(balloons_image)
@@ -799,7 +859,7 @@ guesses_label = tk.Label(master=frame_left,
                          text="you have 6 guesses left",
                          font="Helvetica 25")
 
-frame_right = tk.Frame(master=window)
+frame_right = tk.Frame(master=game_frame)
 welcome_label = tk.Label(master=frame_right,
                          text="Welcome to Hangman!",
                          font="Helvetica 70 bold",
@@ -833,6 +893,13 @@ availabe_letters_label = tk.Label(master=frame_right,
 letters_frame = tk.Frame(master=frame_right)
 
 # grid widgets
+opening_frame.pack()
+welcome_label_opening.pack()
+rules_label.pack()
+play_button.pack()
+opening_frame.tkraise(game_frame)
+game_frame.pack()
+
 frame_left.grid(row=0, column=0)
 hangman_img_label.grid(row=0, column=0)
 word_label.grid(row=1, column=0)
