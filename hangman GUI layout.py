@@ -680,32 +680,8 @@ def is_word_guessed():
 
 def endGame():
     "deactivates all buttons, ending the game"
-    button_a["state"] = "disabled"
-    button_b["state"] = "disabled"
-    button_c["state"] = "disabled"
-    button_d["state"] = "disabled"
-    button_e["state"] = "disabled"
-    button_f["state"] = "disabled"
-    button_g["state"] = "disabled"
-    button_h["state"] = "disabled"
-    button_i["state"] = "disabled"
-    button_j["state"] = "disabled"
-    button_k["state"] = "disabled"
-    button_l["state"] = "disabled"
-    button_m["state"] = "disabled"
-    button_n["state"] = "disabled"
-    button_o["state"] = "disabled"
-    button_p["state"] = "disabled"
-    button_q["state"] = "disabled"
-    button_r["state"] = "disabled"
-    button_s["state"] = "disabled"
-    button_t["state"] = "disabled"
-    button_u["state"] = "disabled"
-    button_v["state"] = "disabled"
-    button_w["state"] = "disabled"
-    button_x["state"] = "disabled"
-    button_y["state"] = "disabled"
-    button_z["state"] = "disabled"
+    for button in letter_buttons_list:
+        button["state"] = "disabled"
 
 
 def lose_game():
@@ -769,12 +745,29 @@ def updateDialogue(new_text):
 
 
 def resetGame():
-    """resets all game variables"""
+    """resets the game"""
     # TODO list
     # reset all buttons
+    for button in letter_buttons_list:
+        button["state"] = "normal"
     # reset all variables
-    # select new random word
-    # reset dialogue boxes
+    global secret_word
+    global secret_word_lenght
+    global guesses_remaining
+    global letters_guessed
+    global word_is_guessed
+    secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
+    secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
+    guesses_remaining = tk.IntVar(master=window, value=6)
+    letters_guessed = tk.StringVar(master=window, value="")
+    word_is_guessed = tk.BooleanVar(master=window, value=False)
+    # reset labels
+    hangman_img_label["image"] = hangman_6
+    word_label["text"] = "_ "*secret_word_lenght.get()
+    guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
+    updateDialogue("")
+    updateDialogue("I've selected a new word")
+    updateDialogue(f"I am thinking of a word that is {secret_word_lenght.get()} letters long.")
 
 
 # create master window
@@ -914,7 +907,8 @@ reset_button = tk.Button(master=reset_import_frame,
                          borderwidth=5,
                          relief=tk.RAISED,
                          width=6,
-                         height=1)
+                         height=1,
+                         command=resetGame)
 
 
 # grid widgets
@@ -1178,6 +1172,33 @@ button_w.grid(row=2, column=5, padx=10, pady=10)
 button_x.grid(row=2, column=6, padx=10, pady=10)
 button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
+
+letter_buttons_list = [button_a,
+                       button_b,
+                       button_c,
+                       button_d,
+                       button_e,
+                       button_f,
+                       button_g,
+                       button_h,
+                       button_i,
+                       button_j,
+                       button_k,
+                       button_l,
+                       button_m,
+                       button_n,
+                       button_o,
+                       button_p,
+                       button_q,
+                       button_r,
+                       button_s,
+                       button_t,
+                       button_u,
+                       button_v,
+                       button_w,
+                       button_x,
+                       button_y,
+                       button_z]
 
 # TODO implement reset button
 # TODO implement option to import own word list
