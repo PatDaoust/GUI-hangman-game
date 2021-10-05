@@ -868,26 +868,35 @@ dialogue_label_1 = tk.Label(master=frame_right,
                             font="Helvetica 30",
                             borderwidth=5,
                             relief=tk.SUNKEN,
-                            width=40,
+                            width=43,
                             height=2)
 dialogue_label_2 = tk.Label(master=frame_right,
                             font="Helvetica 30",
                             fg="#D0D4D6",
                             borderwidth=5,
                             relief=tk.SUNKEN,
-                            width=40,
+                            width=43,
                             height=2)
 dialogue_label_3 = tk.Label(master=frame_right,
                             font="Helvetica 30",
                             fg="#D0D4D6",
                             borderwidth=5,
                             relief=tk.SUNKEN,
-                            width=40,
+                            width=43,
                             height=2)
 availabe_letters_label = tk.Label(master=frame_right,
                                   text="available letters",
                                   font="Helvetica 20 italic")
-letters_frame = tk.Frame(master=frame_right)
+letters_frame = tk.Frame(master=frame_right,
+                         borderwidth=5,
+                         relief=tk.SUNKEN)
+
+reset_import_frame = tk.Frame(master=frame_right)
+import_button = tk.Button(master=reset_import_frame,
+                          text="Import Wordlist")
+reset_button = tk.Button(master=reset_import_frame,
+                         text="Reset Game")
+
 
 # grid widgets
 opening_frame.grid(row=0, column=0, sticky="nsew")
@@ -903,12 +912,16 @@ word_label.grid(row=1, column=0)
 guesses_label.grid(row=2, column=0)
 
 frame_right.grid(row=0, column=1)
-welcome_label.grid(row=0, column=0, sticky="n")
-dialogue_label_1.grid(row=3, column=0)
-dialogue_label_2.grid(row=2, column=0)
-dialogue_label_3.grid(row=1, column=0)
+welcome_label.grid(row=0, column=0, sticky="n", columnspan=2)
+dialogue_label_1.grid(row=3, column=0, columnspan=2)
+dialogue_label_2.grid(row=2, column=0, columnspan=2)
+dialogue_label_3.grid(row=1, column=0, columnspan=2)
 availabe_letters_label.grid(row=4, column=0)
 letters_frame.grid(row=5, column=0)
+
+reset_import_frame.grid(row=5, column=1)
+import_button.grid(row=0, column=0, sticky="nsew")
+reset_button.grid(row=1, column=0, sticky="nsew")
 
 # create and grid letter buttons
 button_a = tk.Button(master=letters_frame,
@@ -1147,8 +1160,9 @@ button_x.grid(row=2, column=6, padx=10, pady=10)
 button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
 
-# TODO reset button. (shift letters left, place reset botton to center right)
-# TODO option to import own word list (button under reset button)
+# TODO shift letters left, place reset botton to center right, place import under reset
+# TODO implement reset button
+# TODO implement option to import own word list
 # TODO write single letterPress() function, use lambda function on button command
 # TODO make .exe file to send out
 
