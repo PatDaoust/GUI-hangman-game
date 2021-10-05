@@ -768,6 +768,15 @@ def updateDialogue(new_text):
     dialogue_label_1["text"] = new_text
 
 
+def resetGame():
+    """resets all game variables"""
+    # TODO list
+    # reset all buttons
+    # reset all variables
+    # select new random word
+    # reset dialogue boxes
+
+
 # create master window
 window = tk.Tk()
 window.title("hangman layout")
@@ -894,14 +903,14 @@ letters_frame = tk.Frame(master=frame_right,
 reset_import_frame = tk.Frame(master=frame_right)
 import_button = tk.Button(master=reset_import_frame,
                           text="Import\nWordlist",
-                          font="Helvetica 30",
+                          font="Helvetica 20",
                           borderwidth=5,
                           relief=tk.RAISED,
                           width=6,
                           height=1)
 reset_button = tk.Button(master=reset_import_frame,
                          text="Reset\nGame",
-                         font="Helvetica 30",
+                         font="Helvetica 20",
                          borderwidth=5,
                          relief=tk.RAISED,
                          width=6,
