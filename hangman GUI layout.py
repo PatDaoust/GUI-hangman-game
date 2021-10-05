@@ -893,9 +893,19 @@ letters_frame = tk.Frame(master=frame_right,
 
 reset_import_frame = tk.Frame(master=frame_right)
 import_button = tk.Button(master=reset_import_frame,
-                          text="Import Wordlist")
+                          text="Import\nWordlist",
+                          font="Helvetica 30",
+                          borderwidth=5,
+                          relief=tk.RAISED,
+                          width=6,
+                          height=1)
 reset_button = tk.Button(master=reset_import_frame,
-                         text="Reset Game")
+                         text="Reset\nGame",
+                         font="Helvetica 30",
+                         borderwidth=5,
+                         relief=tk.RAISED,
+                         width=6,
+                         height=1)
 
 
 # grid widgets
@@ -919,9 +929,9 @@ dialogue_label_3.grid(row=1, column=0, columnspan=2)
 availabe_letters_label.grid(row=4, column=0)
 letters_frame.grid(row=5, column=0)
 
-reset_import_frame.grid(row=5, column=1)
-import_button.grid(row=0, column=0, sticky="nsew")  # TODO edit stiky
-reset_button.grid(row=1, column=0, sticky="nsew")  # TODO edit stiky
+reset_import_frame.grid(row=5, column=1, sticky="sw")
+import_button.grid(row=0, column=0, sticky="sw", pady=10)
+reset_button.grid(row=1, column=0, sticky="sw", pady=10)
 
 # create and grid letter buttons
 button_a = tk.Button(master=letters_frame,
