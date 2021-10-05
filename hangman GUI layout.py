@@ -817,9 +817,6 @@ play_button = tk.Button(master=opening_frame,
                         command=opening_frame.destroy
                         )
 opening_frame.tkraise()
-# TODO put other frames in game frame
-# TODO start game with opening frame, close when click "lets play"
-# TODO place frames
 
 # create widgets
 game_frame = tk.Frame(master=window)
@@ -1150,9 +1147,8 @@ button_x.grid(row=2, column=6, padx=10, pady=10)
 button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
 
-# TODO reset button
-# TODO option to import own word list
-# TODO instructions for gameplay
+# TODO reset button. (shift letters left, place reset botton to center right)
+# TODO option to import own word list (button under reset button)
 # TODO write single letterPress() function, use lambda function on button command
 # TODO make .exe file to send out
 
