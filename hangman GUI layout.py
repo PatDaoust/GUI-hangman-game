@@ -920,8 +920,8 @@ availabe_letters_label.grid(row=4, column=0)
 letters_frame.grid(row=5, column=0)
 
 reset_import_frame.grid(row=5, column=1)
-import_button.grid(row=0, column=0, sticky="nsew")
-reset_button.grid(row=1, column=0, sticky="nsew")
+import_button.grid(row=0, column=0, sticky="nsew")  # TODO edit stiky
+reset_button.grid(row=1, column=0, sticky="nsew")  # TODO edit stiky
 
 # create and grid letter buttons
 button_a = tk.Button(master=letters_frame,
@@ -1160,10 +1160,10 @@ button_x.grid(row=2, column=6, padx=10, pady=10)
 button_y.grid(row=2, column=7, padx=10, pady=10)
 button_z.grid(row=2, column=8, padx=10, pady=10)
 
-# TODO shift letters left, place reset botton to center right, place import under reset
 # TODO implement reset button
 # TODO implement option to import own word list
 # TODO write single letterPress() function, use lambda function on button command
+# TODO try alternaqtive color scheme
 # TODO make .exe file to send out
 
 window.mainloop()
