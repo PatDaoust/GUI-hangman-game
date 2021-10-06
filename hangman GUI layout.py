@@ -768,10 +768,13 @@ def resetGame():
 def customWordList():
     """imports a user-defined word list and selects a word from it"""
     # TODO write format instructions for user
+    global WORDLIST_FILENAME
     WORDLIST_FILENAME = askopenfilename(
         filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
-    # TODO figure out why cant see "test words"
     wordlist = load_words()
+    print(WORDLIST_FILENAME)
+    print(wordlist)
+    # select new word
     secret_word.set(choose_word(wordlist))
 
 
