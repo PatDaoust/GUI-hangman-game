@@ -6,6 +6,7 @@ Created on Fri Sep 17 17:41:29 2021
 """
 
 import tkinter as tk
+from tkinter import ttk
 from PIL import ImageTk, Image
 import random
 from tkinter.filedialog import askopenfilename
@@ -765,16 +766,36 @@ def resetGame():
     updateDialogue(f"I am thinking of a word that is {secret_word_lenght.get()} letters long.")
 
 
-def customWordList():
-    """imports a user-defined word list and selects a word from it"""
-    # TODO write format instructions for user
+def popupmsg(msg):
+    popup = tk.Tk()
+    popup.wm_title("!")
+    # TODO format label output
+    label = ttk.Label(popup,
+                      text=msg,
+                      font="Helvetica 30",
+                      justify="center")
+    label.pack(side="top", fill="x", pady=10)
+    B1 = ttk.Button(popup, text="Okay", command=lambda: destroyPopupAndGetFileName(popup))
+    B1.pack()
+    popup.mainloop()
+
+
+def destroyPopupAndGetFileName(popup):
+    """TODO"""
+    popup.destroy()
     global WORDLIST_FILENAME
     WORDLIST_FILENAME = askopenfilename(
         filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
+
+
+def customWordList():
+    """allows user to import a .txt file with their own word list
+    selects a word from the user's word list"""
+    import_instructions = "You can import your own word list to play with.\nThe file must be in .txt format, and contain only lowercase letters a-z and spaces.\nThe game will use each sequence of letters a-z as a word,\nwith the spaces defining seperate words.\n\nImporting your word list will not untrupt your current game.\nTo start a game with your chosen word list, please press reset"
+    global WORDLIST_FILENAME
+    popupmsg(import_instructions)
+    global wordlist
     wordlist = load_words()
-    print(WORDLIST_FILENAME)
-    print(wordlist)
-    # select new word
     secret_word.set(choose_word(wordlist))
 
 
@@ -1208,9 +1229,9 @@ letter_buttons_list = [button_a,
                        button_y,
                        button_z]
 
-# TODO implement option to import own word list
 # TODO write single letterPress() function, use lambda function on button command
 # TODO try alternaqtive color scheme
 # TODO make .exe file to send out
+# TODO make gitignore file
 
 window.mainloop()
