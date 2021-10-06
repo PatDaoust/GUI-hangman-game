@@ -12,620 +12,20 @@ import random
 from tkinter.filedialog import askopenfilename
 
 
-def letterPressA():
+def letterPress(letter, button):
     """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
     submits the letter to the game
     """
-    updateDialogue("You have selected the letter a")
-    button_a["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "a")
+    updateDialogue(f"You have selected the letter {letter}")
+    button["state"] = "disabled"
+    letters_guessed.set(letters_guessed.get() + letter)
     word_is_guessed.set(is_word_guessed())
     next_round()
     did_win = is_word_guessed()
     if did_win:
         win_game()
     else:
-        if "a" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressB():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter b")
-    button_b["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "b")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "b" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressC():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter c")
-    button_c["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "c")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "c" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressD():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter d")
-    button_d["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "d")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "d" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressE():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter e")
-    button_e["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "e")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "e" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressF():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter f")
-    button_f["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "f")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "f" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressG():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter g")
-    button_g["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "g")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "g" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressH():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter h")
-    button_h["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "h")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "h" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressI():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter i")
-    button_i["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "i")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "i" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressJ():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter j")
-    button_j["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "j")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "j" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressK():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter k")
-    button_k["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "k")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "k" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressL():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter l")
-    button_l["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "l")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "l" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressM():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter m")
-    button_m["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "m")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "m" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressN():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter n")
-    button_n["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "n")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "n" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressO():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter o")
-    button_o["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "o")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "o" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressP():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter p")
-    button_p["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "p")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "p" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressQ():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter q")
-    button_q["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "q")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "q" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressR():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter r")
-    button_r["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "r")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "r" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressS():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter s")
-    button_s["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "s")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "s" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressT():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter t")
-    button_t["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "t")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "t" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressU():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter u")
-    button_u["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "u")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "u" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressV():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter v")
-    button_v["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "v")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "v" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressW():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter w")
-    button_w["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "w")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "w" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressX():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letterx ")
-    button_x["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "x")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "x" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressY():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter y")
-    button_y["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "y")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "y" in secret_word.get():
-            updateDialogue("Good guess!")
-        else:
-            updateDialogue("Bad guess. You've been penalized a guess")
-            guesses_remaining.set(guesses_remaining.get()-1)
-            guesses_label["text"] = f"you have {guesses_remaining.get()} guesses left"
-            if guesses_remaining.get() <= 0:
-                lose_game()
-        updatePicture()
-
-
-def letterPressZ():
-    """assumes letter is a char in "abcdefghijklmnopqrstuvwxyz"
-    submits the letter to the game
-    """
-    updateDialogue("You have selected the letter z")
-    button_z["state"] = "disabled"
-    letters_guessed.set(letters_guessed.get() + "z")
-    word_is_guessed.set(is_word_guessed())
-    next_round()
-    did_win = is_word_guessed()
-    if did_win:
-        win_game()
-    else:
-        if "z" in secret_word.get():
+        if letter in secret_word.get():
             updateDialogue("Good guess!")
         else:
             updateDialogue("Bad guess. You've been penalized a guess")
@@ -769,7 +169,6 @@ def resetGame():
 def popupmsg(msg):
     popup = tk.Tk()
     popup.wm_title("!")
-    # TODO format label output
     label = ttk.Label(popup,
                       text=msg,
                       font="Helvetica 30",
@@ -972,7 +371,7 @@ button_a = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="a",
                      disabledforeground="#D0D4D6",
-                     command=letterPressA
+                     command=lambda: letterPress("a", button_a)
                      )
 button_b = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -980,7 +379,7 @@ button_b = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="b",
                      disabledforeground="#D0D4D6",
-                     command=letterPressB
+                     command=lambda: letterPress("b", button_b)
                      )
 button_c = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -988,7 +387,7 @@ button_c = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="c",
                      disabledforeground="#D0D4D6",
-                     command=letterPressC
+                     command=lambda: letterPress("c", button_c)
                      )
 button_d = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -996,7 +395,7 @@ button_d = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="d",
                      disabledforeground="#D0D4D6",
-                     command=letterPressD
+                     command=lambda: letterPress("d", button_d)
                      )
 button_e = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1004,7 +403,7 @@ button_e = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="e",
                      disabledforeground="#D0D4D6",
-                     command=letterPressE
+                     command=lambda: letterPress("e", button_e)
                      )
 button_f = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1012,7 +411,7 @@ button_f = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="f",
                      disabledforeground="#D0D4D6",
-                     command=letterPressF
+                     command=lambda: letterPress("f", button_f)
                      )
 button_g = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1020,7 +419,7 @@ button_g = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="g",
                      disabledforeground="#D0D4D6",
-                     command=letterPressG
+                     command=lambda: letterPress("g", button_g)
                      )
 button_h = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1028,7 +427,7 @@ button_h = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="h",
                      disabledforeground="#D0D4D6",
-                     command=letterPressH
+                     command=lambda: letterPress("h", button_h)
                      )
 button_i = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1036,7 +435,7 @@ button_i = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="i",
                      disabledforeground="#D0D4D6",
-                     command=letterPressI
+                     command=lambda: letterPress("i", button_i)
                      )
 button_j = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1044,7 +443,7 @@ button_j = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="j",
                      disabledforeground="#D0D4D6",
-                     command=letterPressJ
+                     command=lambda: letterPress("j", button_j)
                      )
 button_k = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1052,7 +451,7 @@ button_k = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="k",
                      disabledforeground="#D0D4D6",
-                     command=letterPressK
+                     command=lambda: letterPress("k", button_k)
                      )
 button_l = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1060,7 +459,7 @@ button_l = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="l",
                      disabledforeground="#D0D4D6",
-                     command=letterPressL
+                     command=lambda: letterPress("l", button_l)
                      )
 button_m = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1068,7 +467,7 @@ button_m = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="m",
                      disabledforeground="#D0D4D6",
-                     command=letterPressM
+                     command=lambda: letterPress("m", button_m)
                      )
 button_n = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1076,7 +475,7 @@ button_n = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="n",
                      disabledforeground="#D0D4D6",
-                     command=letterPressN
+                     command=lambda: letterPress("n", button_n)
                      )
 button_o = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1084,7 +483,7 @@ button_o = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="o",
                      disabledforeground="#D0D4D6",
-                     command=letterPressO
+                     command=lambda: letterPress("o", button_o)
                      )
 button_p = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1092,7 +491,7 @@ button_p = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="p",
                      disabledforeground="#D0D4D6",
-                     command=letterPressP
+                     command=lambda: letterPress("p", button_p)
                      )
 button_q = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1100,7 +499,7 @@ button_q = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="q",
                      disabledforeground="#D0D4D6",
-                     command=letterPressQ
+                     command=lambda: letterPress("q", button_q)
                      )
 button_r = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1108,7 +507,7 @@ button_r = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="r",
                      disabledforeground="#D0D4D6",
-                     command=letterPressR
+                     command=lambda: letterPress("r", button_r)
                      )
 button_s = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1116,7 +515,7 @@ button_s = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="s",
                      disabledforeground="#D0D4D6",
-                     command=letterPressS
+                     command=lambda: letterPress("s", button_s)
                      )
 button_t = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1124,7 +523,7 @@ button_t = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="t",
                      disabledforeground="#D0D4D6",
-                     command=letterPressT
+                     command=lambda: letterPress("t", button_t)
                      )
 button_u = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1132,7 +531,7 @@ button_u = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="u",
                      disabledforeground="#D0D4D6",
-                     command=letterPressU
+                     command=lambda: letterPress("u", button_u)
                      )
 button_v = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1140,7 +539,7 @@ button_v = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="v",
                      disabledforeground="#D0D4D6",
-                     command=letterPressV
+                     command=lambda: letterPress("v", button_v)
                      )
 button_w = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1148,7 +547,7 @@ button_w = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="w",
                      disabledforeground="#D0D4D6",
-                     command=letterPressW
+                     command=lambda: letterPress("w", button_w)
                      )
 button_x = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1156,7 +555,7 @@ button_x = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="x",
                      disabledforeground="#D0D4D6",
-                     command=letterPressX
+                     command=lambda: letterPress("x", button_x)
                      )
 button_y = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1164,7 +563,7 @@ button_y = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="y",
                      disabledforeground="#D0D4D6",
-                     command=letterPressY
+                     command=lambda: letterPress("y", button_y)
                      )
 button_z = tk.Button(master=letters_frame,
                      relief=tk.RAISED,
@@ -1172,7 +571,7 @@ button_z = tk.Button(master=letters_frame,
                      font="Helvetica 30 bold",
                      text="z",
                      disabledforeground="#D0D4D6",
-                     command=letterPressZ
+                     command=lambda: letterPress("z", button_z)
                      )
 
 button_a.grid(row=0, column=0, padx=10, pady=10)
@@ -1229,7 +628,6 @@ letter_buttons_list = [button_a,
                        button_y,
                        button_z]
 
-# TODO write single letterPress() function, use lambda function on button command
 # TODO try alternaqtive color scheme
 # TODO make .exe file to send out
 # TODO make gitignore file
