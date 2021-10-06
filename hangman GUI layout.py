@@ -8,6 +8,7 @@ Created on Fri Sep 17 17:41:29 2021
 import tkinter as tk
 from PIL import ImageTk, Image
 import random
+from tkinter.filedialog import askopenfilename
 
 
 def letterPressA():
@@ -745,22 +746,16 @@ def updateDialogue(new_text):
 
 
 def resetGame():
-    """resets the game"""
-    # TODO list
+    """resets the game variables and GUI"""
     # reset all buttons
     for button in letter_buttons_list:
         button["state"] = "normal"
     # reset all variables
-    global secret_word
-    global secret_word_lenght
-    global guesses_remaining
-    global letters_guessed
-    global word_is_guessed
-    secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
-    secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
-    guesses_remaining = tk.IntVar(master=window, value=6)
-    letters_guessed = tk.StringVar(master=window, value="")
-    word_is_guessed = tk.BooleanVar(master=window, value=False)
+    secret_word.set(choose_word(load_words()))
+    secret_word_lenght.set(len(secret_word.get()))
+    guesses_remaining.set(6)
+    letters_guessed.set("")
+    word_is_guessed.set(False)
     # reset labels
     hangman_img_label["image"] = hangman_6
     word_label["text"] = "_ "*secret_word_lenght.get()
@@ -768,6 +763,16 @@ def resetGame():
     updateDialogue("")
     updateDialogue("I've selected a new word")
     updateDialogue(f"I am thinking of a word that is {secret_word_lenght.get()} letters long.")
+
+
+def customWordList():
+    """imports a user-defined word list and selects a word from it"""
+    # TODO write format instructions for user
+    WORDLIST_FILENAME = askopenfilename(
+        filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
+    # TODO figure out why cant see "test words"
+    wordlist = load_words()
+    secret_word.set(choose_word(wordlist))
 
 
 # create master window
@@ -781,8 +786,7 @@ window.iconphoto(False, icon_photo)
 
 # initialize gameplay variables
 WORDLIST_FILENAME = "words.txt"
-# secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
-secret_word = tk.StringVar(master=window, value="cats")  # TODO randomize
+secret_word = tk.StringVar(master=window, value=choose_word(load_words()))
 secret_word_lenght = tk.IntVar(master=window, value=len(secret_word.get()))
 guesses_remaining = tk.IntVar(master=window, value=6)
 letters_guessed = tk.StringVar(master=window, value="")
@@ -900,7 +904,8 @@ import_button = tk.Button(master=reset_import_frame,
                           borderwidth=5,
                           relief=tk.RAISED,
                           width=6,
-                          height=1)
+                          height=1,
+                          command=customWordList)
 reset_button = tk.Button(master=reset_import_frame,
                          text="Reset\nGame",
                          font="Helvetica 20",
@@ -1200,7 +1205,6 @@ letter_buttons_list = [button_a,
                        button_y,
                        button_z]
 
-# TODO implement reset button
 # TODO implement option to import own word list
 # TODO write single letterPress() function, use lambda function on button command
 # TODO try alternaqtive color scheme
