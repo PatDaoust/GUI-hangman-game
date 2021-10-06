@@ -629,6 +629,20 @@ letter_buttons_list = [button_a,
                        button_z]
 
 # TODO try alternaqtive color scheme
+# coastline
+    # turquoise # B6DCE9
+    # teal #307C91
+    # gray #8B929A
+    # cream #E5E3E4
+    # brown #7B5C52
+# omega yeast
+    # white #F7F7F7
+    # faded teal #7DA2A9
+    # tan #D2B48C
+# yoga studio
+    # caramel #8B694D
+    # cream #E8E2D0
+    # tan #B0A18B
 # TODO make .exe file to send out
 # TODO make gitignore file
 
