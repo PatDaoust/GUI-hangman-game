@@ -190,7 +190,6 @@ def popupmsg(msg):
 
 
 def destroyPopupAndGetFileName(popup):
-    """TODO"""
     popup.destroy()
     global WORDLIST_FILENAME
     WORDLIST_FILENAME = askopenfilename(
@@ -209,10 +208,26 @@ def customWordList():
 
 
 # color scheme variables
-active_text_color = "#F7F7F7"
-inactive_color = "#7DA2A9"
-bg_color = "#D2B48C"
-accent_color = "#B00B69"
+active_text_color = "#307C91"
+inactive_color = "#B6DCE9"
+bg_color = "#E5E3E4"
+# TODO add accent color
+accent_color = "#F7F7F7"
+
+# coastline
+    # turquoise #B6DCE9
+    # teal #307C91
+    # gray #8B929A
+    # cream #E5E3E4
+    # brown #7B5C52
+# omega yeast
+    # white #F7F7F7
+    # faded teal #7DA2A9
+    # tan #D2B48C
+# yoga studio
+    # caramel #8B694D
+    # cream #E8E2D0
+    # tan #B0A18B
 
 # create master window
 window = tk.Tk()
@@ -327,7 +342,6 @@ dialogue_label_1 = tk.Label(master=frame_right,
                             fg=active_text_color,
                             bg=bg_color,
                             borderwidth=5,
-                            relief=tk.SUNKEN,
                             width=43,
                             height=2)
 dialogue_label_2 = tk.Label(master=frame_right,
@@ -335,7 +349,6 @@ dialogue_label_2 = tk.Label(master=frame_right,
                             fg=inactive_color,
                             bg=bg_color,
                             borderwidth=5,
-                            relief=tk.SUNKEN,
                             width=43,
                             height=2)
 dialogue_label_3 = tk.Label(master=frame_right,
@@ -343,7 +356,6 @@ dialogue_label_3 = tk.Label(master=frame_right,
                             fg=inactive_color,
                             bg=bg_color,
                             borderwidth=5,
-                            relief=tk.SUNKEN,
                             width=43,
                             height=2)
 availabe_letters_label = tk.Label(master=frame_right,
@@ -721,22 +733,6 @@ letter_buttons_list = [button_a,
                        button_z]
 
 # TODO try alternaqtive color scheme
-# plan = pick 3-color schemes, fill in color1 color2 color3 across code
-# coastline
-    # turquoise # B6DCE9
-    # teal #307C91
-    # gray #8B929A
-    # cream #E5E3E4
-    # brown #7B5C52
-# omega yeast
-    # white #F7F7F7
-    # faded teal #7DA2A9
-    # tan #D2B48C
-# yoga studio
-    # caramel #8B694D
-    # cream #E8E2D0
-    # tan #B0A18B
-# TOOO commit stuff
 # TODO make .exe file
 # TODO make gitignore file
 
