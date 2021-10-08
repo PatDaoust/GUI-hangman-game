@@ -643,6 +643,7 @@ letter_buttons_list = [button_a,
     # caramel #8B694D
     # cream #E8E2D0
     # tan #B0A18B
+# TOOO commit stuff
 # TODO make .exe file
 # TODO make gitignore file
 
