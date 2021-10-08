@@ -168,13 +168,23 @@ def resetGame():
 
 def popupmsg(msg):
     popup = tk.Tk()
-    popup.wm_title("!")
+    popup["bg"] = bg_color
+    popup.wm_title("Import Instructions")
     label = ttk.Label(popup,
                       text=msg,
                       font="Helvetica 30",
-                      justify="center")
+                      justify="center",
+                      background=bg_color,
+                      foreground=active_text_color)
     label.pack(side="top", fill="x", pady=10)
-    B1 = ttk.Button(popup, text="Okay", command=lambda: destroyPopupAndGetFileName(popup))
+    B1 = tk.Button(popup,
+                   text="Okay",
+                   font="Helvetica 30",
+                   bg=bg_color,
+                   fg=active_text_color,
+                   relief=tk.RAISED,
+                   borderwidth=5,
+                   command=lambda: destroyPopupAndGetFileName(popup))
     B1.pack()
     popup.mainloop()
 
@@ -190,7 +200,7 @@ def destroyPopupAndGetFileName(popup):
 def customWordList():
     """allows user to import a .txt file with their own word list
     selects a word from the user's word list"""
-    import_instructions = "You can import your own word list to play with.\nThe file must be in .txt format, and contain only lowercase letters a-z and spaces.\nThe game will use each sequence of letters a-z as a word,\nwith the spaces defining seperate words.\n\nImporting your word list will not untrupt your current game.\nTo start a game with your chosen word list, please press reset"
+    import_instructions = "You can import your own word list to play with.\nThe file must be in .txt format, and contain only lowercase letters a-z and spaces.\nThe game will use each sequence of letters a-z as a word,\nwith the spaces defining seperate words.\n\nImporting your word list will not untrupt your current game.\nTo start a game with your chosen word list, press reset"
     global WORDLIST_FILENAME
     popupmsg(import_instructions)
     global wordlist
@@ -198,12 +208,19 @@ def customWordList():
     secret_word.set(choose_word(wordlist))
 
 
+# color scheme variables
+active_text_color = "#F7F7F7"
+inactive_color = "#7DA2A9"
+bg_color = "#D2B48C"
+accent_color = "#B00B69"
+
 # create master window
 window = tk.Tk()
 window.title("hangman layout")
 window.columnconfigure(0, weight=1, minsize=75)
 window.columnconfigure(1, weight=1, minsize=75)
 window.rowconfigure(0, weight=1, minsize=50)
+window["bg"] = bg_color
 icon_photo = ImageTk.PhotoImage(Image.open("hangman icon.jpg"))
 window.iconphoto(False, icon_photo)
 
@@ -228,19 +245,25 @@ The letters will conviniently turn themselves off after you press them.
 At the end of the game, you will recieve a score.
 The less guesses you use up, the higher your score will be.
 """
-opening_frame = tk.Frame(master=window)
+opening_frame = tk.Frame(master=window, bg=bg_color)
 welcome_label_opening = tk.Label(master=opening_frame,
+                                 fg=active_text_color,
+                                 bg=bg_color,
                                  text="Welcome to Hangman!",
                                  font="Helvetica 70 bold",
                                  width=20,
                                  height=1)
 rules_label = tk.Label(master=opening_frame,
                        text=rules_text,
+                       fg=active_text_color,
+                       bg=bg_color,
                        font="Helvetica 30"
                        )
 play_button = tk.Button(master=opening_frame,
                         text="Let's play",
                         font="Helvetica 30",
+                        fg=active_text_color,
+                        bg=bg_color,
                         relief=tk.RAISED,
                         borderwidth=5,
                         command=opening_frame.destroy
@@ -248,8 +271,8 @@ play_button = tk.Button(master=opening_frame,
 opening_frame.tkraise()
 
 # create widgets
-game_frame = tk.Frame(master=window)
-frame_left = tk.Frame(master=game_frame)
+game_frame = tk.Frame(master=window, bg=bg_color)
+frame_left = tk.Frame(master=game_frame, bg=bg_color)
 balloons_image = Image.open("balloons3.jpg")
 balloons_image = balloons_image.resize((500, 800), Image.NEAREST)
 balloons_image = ImageTk.PhotoImage(balloons_image)
@@ -279,51 +302,66 @@ hangman_img_label = tk.Label(master=frame_left,
                              width=500,
                              height=800,)
 word_label = tk.Label(master=frame_left,
+                      fg=active_text_color,
+                      bg=bg_color,
                       text="_ "*secret_word_lenght.get(),
                       font="Helvetica 25 bold italic")
 guesses_label = tk.Label(master=frame_left,
+                         fg=active_text_color,
+                         bg=bg_color,
                          text="you have 6 guesses left",
                          font="Helvetica 25")
 
-frame_right = tk.Frame(master=game_frame)
+frame_right = tk.Frame(master=game_frame, bg=bg_color)
 welcome_label = tk.Label(master=frame_right,
                          text="Welcome to Hangman!",
                          font="Helvetica 70 bold",
+                         fg=active_text_color,
+                         bg=bg_color,
                          width=20,
                          height=1)
 intro_dialogue = f"Loading word list from file...\nI am thinking of a word that is {secret_word_lenght.get()} letters long."
 dialogue_label_1 = tk.Label(master=frame_right,
                             text=intro_dialogue,
                             font="Helvetica 30",
+                            fg=active_text_color,
+                            bg=bg_color,
                             borderwidth=5,
                             relief=tk.SUNKEN,
                             width=43,
                             height=2)
 dialogue_label_2 = tk.Label(master=frame_right,
                             font="Helvetica 30",
-                            fg="#D0D4D6",
+                            fg=inactive_color,
+                            bg=bg_color,
                             borderwidth=5,
                             relief=tk.SUNKEN,
                             width=43,
                             height=2)
 dialogue_label_3 = tk.Label(master=frame_right,
                             font="Helvetica 30",
-                            fg="#D0D4D6",
+                            fg=inactive_color,
+                            bg=bg_color,
                             borderwidth=5,
                             relief=tk.SUNKEN,
                             width=43,
                             height=2)
 availabe_letters_label = tk.Label(master=frame_right,
+                                  fg=active_text_color,
+                                  bg=bg_color,
                                   text="available letters",
                                   font="Helvetica 20 italic")
 letters_frame = tk.Frame(master=frame_right,
                          borderwidth=5,
-                         relief=tk.SUNKEN)
+                         relief=tk.SUNKEN,
+                         bg=bg_color)
 
-reset_import_frame = tk.Frame(master=frame_right)
+reset_import_frame = tk.Frame(master=frame_right, bg=bg_color)
 import_button = tk.Button(master=reset_import_frame,
                           text="Import\nWordlist",
                           font="Helvetica 20",
+                          fg=active_text_color,
+                          bg=bg_color,
                           borderwidth=5,
                           relief=tk.RAISED,
                           width=6,
@@ -332,6 +370,8 @@ import_button = tk.Button(master=reset_import_frame,
 reset_button = tk.Button(master=reset_import_frame,
                          text="Reset\nGame",
                          font="Helvetica 20",
+                         fg=active_text_color,
+                         bg=bg_color,
                          borderwidth=5,
                          relief=tk.RAISED,
                          width=6,
@@ -370,7 +410,9 @@ button_a = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="a",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("a", button_a)
                      )
 button_b = tk.Button(master=letters_frame,
@@ -378,7 +420,9 @@ button_b = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="b",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("b", button_b)
                      )
 button_c = tk.Button(master=letters_frame,
@@ -386,7 +430,9 @@ button_c = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="c",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("c", button_c)
                      )
 button_d = tk.Button(master=letters_frame,
@@ -394,7 +440,9 @@ button_d = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="d",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("d", button_d)
                      )
 button_e = tk.Button(master=letters_frame,
@@ -402,7 +450,9 @@ button_e = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="e",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("e", button_e)
                      )
 button_f = tk.Button(master=letters_frame,
@@ -410,7 +460,9 @@ button_f = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="f",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("f", button_f)
                      )
 button_g = tk.Button(master=letters_frame,
@@ -418,7 +470,9 @@ button_g = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="g",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("g", button_g)
                      )
 button_h = tk.Button(master=letters_frame,
@@ -426,7 +480,9 @@ button_h = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="h",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("h", button_h)
                      )
 button_i = tk.Button(master=letters_frame,
@@ -434,7 +490,9 @@ button_i = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="i",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("i", button_i)
                      )
 button_j = tk.Button(master=letters_frame,
@@ -442,7 +500,9 @@ button_j = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="j",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("j", button_j)
                      )
 button_k = tk.Button(master=letters_frame,
@@ -450,7 +510,9 @@ button_k = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="k",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("k", button_k)
                      )
 button_l = tk.Button(master=letters_frame,
@@ -458,7 +520,9 @@ button_l = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="l",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("l", button_l)
                      )
 button_m = tk.Button(master=letters_frame,
@@ -466,7 +530,9 @@ button_m = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="m",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("m", button_m)
                      )
 button_n = tk.Button(master=letters_frame,
@@ -474,7 +540,9 @@ button_n = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="n",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("n", button_n)
                      )
 button_o = tk.Button(master=letters_frame,
@@ -482,7 +550,9 @@ button_o = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="o",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("o", button_o)
                      )
 button_p = tk.Button(master=letters_frame,
@@ -490,7 +560,9 @@ button_p = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="p",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("p", button_p)
                      )
 button_q = tk.Button(master=letters_frame,
@@ -498,7 +570,9 @@ button_q = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="q",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("q", button_q)
                      )
 button_r = tk.Button(master=letters_frame,
@@ -506,7 +580,9 @@ button_r = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="r",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("r", button_r)
                      )
 button_s = tk.Button(master=letters_frame,
@@ -514,7 +590,9 @@ button_s = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="s",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("s", button_s)
                      )
 button_t = tk.Button(master=letters_frame,
@@ -522,7 +600,9 @@ button_t = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="t",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("t", button_t)
                      )
 button_u = tk.Button(master=letters_frame,
@@ -530,7 +610,9 @@ button_u = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="u",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("u", button_u)
                      )
 button_v = tk.Button(master=letters_frame,
@@ -538,7 +620,9 @@ button_v = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="v",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("v", button_v)
                      )
 button_w = tk.Button(master=letters_frame,
@@ -546,7 +630,9 @@ button_w = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="w",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("w", button_w)
                      )
 button_x = tk.Button(master=letters_frame,
@@ -554,7 +640,9 @@ button_x = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="x",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("x", button_x)
                      )
 button_y = tk.Button(master=letters_frame,
@@ -562,7 +650,9 @@ button_y = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="y",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("y", button_y)
                      )
 button_z = tk.Button(master=letters_frame,
@@ -570,7 +660,9 @@ button_z = tk.Button(master=letters_frame,
                      borderwidth=5,
                      font="Helvetica 30 bold",
                      text="z",
-                     disabledforeground="#D0D4D6",
+                     fg=active_text_color,
+                     bg=bg_color,
+                     disabledforeground=inactive_color,
                      command=lambda: letterPress("z", button_z)
                      )
 
@@ -629,6 +721,7 @@ letter_buttons_list = [button_a,
                        button_z]
 
 # TODO try alternaqtive color scheme
+# plan = pick 3-color schemes, fill in color1 color2 color3 across code
 # coastline
     # turquoise # B6DCE9
     # teal #307C91
