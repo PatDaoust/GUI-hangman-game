@@ -6,7 +6,6 @@ Created on Fri Sep 17 17:41:29 2021
 """
 
 import tkinter as tk
-from tkinter import ttk
 from PIL import ImageTk, Image
 import random
 from tkinter.filedialog import askopenfilename
@@ -170,12 +169,12 @@ def popupmsg(msg):
     popup = tk.Tk()
     popup["bg"] = bg_color
     popup.wm_title("Import Instructions")
-    label = ttk.Label(popup,
-                      text=msg,
-                      font="Helvetica 30",
-                      justify="center",
-                      background=bg_color,
-                      foreground=active_text_color)
+    label = tk.Label(popup,
+                     text=msg,
+                     font="Helvetica 30",
+                     justify="center",
+                     background=bg_color,
+                     foreground=active_text_color)
     label.pack(side="top", fill="x", pady=10)
     B1 = tk.Button(popup,
                    text="Okay",
@@ -214,13 +213,13 @@ bg_color = "#E5E3E4"
 
 # create master window
 window = tk.Tk()
-window.title("hangman layout")
+window.title("Hangman")
 window.columnconfigure(0, weight=1, minsize=75)
 window.columnconfigure(1, weight=1, minsize=75)
 window.rowconfigure(0, weight=1, minsize=50)
 window["bg"] = bg_color
-icon_photo = ImageTk.PhotoImage(Image.open("hangman_icon.jpg"))
-window.iconphoto(False, icon_photo)
+# icon_photo = ImageTk.PhotoImage(Image.open("hangman_icon.ico"))
+# window.iconphoto(False, icon_photo)
 
 # initialize gameplay variables
 WORDLIST_FILENAME = "words.txt"
