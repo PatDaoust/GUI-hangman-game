@@ -218,8 +218,8 @@ window.columnconfigure(0, weight=1, minsize=75)
 window.columnconfigure(1, weight=1, minsize=75)
 window.rowconfigure(0, weight=1, minsize=50)
 window["bg"] = bg_color
-# icon_photo = ImageTk.PhotoImage(Image.open("hangman_icon.ico"))
-# window.iconphoto(False, icon_photo)
+icon_photo = ImageTk.PhotoImage(Image.open("hangman_icon.ico"))
+window.iconphoto(False, icon_photo)
 
 # initialize gameplay variables
 WORDLIST_FILENAME = "words.txt"
@@ -715,3 +715,7 @@ letter_buttons_list = [button_a,
                        button_z]
 
 window.mainloop()
+
+# TODO dynamic resizing OR smaller play window
+# option 1: Apply sticky='nsew' to all the widgets
+# option 2 go through and manually resize everything
