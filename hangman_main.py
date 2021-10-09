@@ -219,7 +219,7 @@ window.columnconfigure(0, weight=1, minsize=75)
 window.columnconfigure(1, weight=1, minsize=75)
 window.rowconfigure(0, weight=1, minsize=50)
 window["bg"] = bg_color
-icon_photo = ImageTk.PhotoImage(Image.open("hangman icon.jpg"))
+icon_photo = ImageTk.PhotoImage(Image.open("hangman_icon.jpg"))
 window.iconphoto(False, icon_photo)
 
 # initialize gameplay variables
