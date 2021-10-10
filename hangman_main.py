@@ -718,3 +718,5 @@ window.mainloop()
 
 # TODO dynamic resizing OR smaller play window
 # option 2 go through and manually resize everything, add weight param
+# TODO add weights to widgets
+# TODO downsize images with background
