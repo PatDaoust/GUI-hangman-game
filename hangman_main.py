@@ -214,9 +214,6 @@ bg_color = "#C0C0C0"
 # create master window
 window = tk.Tk()
 window.title("Hangman")
-window.columnconfigure(0, weight=1)
-window.columnconfigure(1, weight=1)
-window.rowconfigure(0, weight=1)
 window["bg"] = bg_color
 icon_photo = ImageTk.PhotoImage(Image.open("hangman_icon.ico"))
 window.iconphoto(False, icon_photo)
@@ -268,36 +265,36 @@ play_button = tk.Button(master=opening_frame,
 opening_frame.tkraise()
 
 # create widgets
-game_frame = tk.Frame(master=window, bg=bg_color)
-frame_left = tk.Frame(master=game_frame, bg=bg_color)
+game_frame = tk.Frame(master=window, bg=bg_color)  # TODO
+frame_left = tk.Frame(master=game_frame, bg=bg_color)  # TODO
 balloons_image = Image.open("balloons3.jpg")
-balloons_image = balloons_image.resize((500, 800), Image.NEAREST)
+balloons_image = balloons_image.resize((333, 533), Image.NEAREST)
 balloons_image = ImageTk.PhotoImage(balloons_image)
-hangman_6 = Image.open("500x800 6guesses.jpg")
-hangman_6 = hangman_6.resize((500, 800), Image.NEAREST)
+hangman_6 = Image.open("333x533 6guesses.jpg")
+hangman_6 = hangman_6.resize((333, 533), Image.NEAREST)
 hangman_6 = ImageTk.PhotoImage(hangman_6)
-hangman_5 = Image.open("500x800 5guesses.jpg")
-hangman_5 = hangman_5.resize((500, 800), Image.NEAREST)
+hangman_5 = Image.open("333x533 5guesses.jpg")
+hangman_5 = hangman_5.resize((333, 533), Image.NEAREST)
 hangman_5 = ImageTk.PhotoImage(hangman_5)
-hangman_4 = Image.open("500x800 4guesses.jpg")
-hangman_4 = hangman_4.resize((500, 800), Image.NEAREST)
+hangman_4 = Image.open("333x533 4guesses.jpg")
+hangman_4 = hangman_4.resize((333, 533), Image.NEAREST)
 hangman_4 = ImageTk.PhotoImage(hangman_4)
-hangman_3 = Image.open("500x800 3guesses.jpg")
-hangman_3 = hangman_3.resize((500, 800), Image.NEAREST)
+hangman_3 = Image.open("333x533 3guesses.jpg")
+hangman_3 = hangman_3.resize((333, 533), Image.NEAREST)
 hangman_3 = ImageTk.PhotoImage(hangman_3)
-hangman_2 = Image.open("500x800 2guesses.jpg")
-hangman_2 = hangman_2.resize((500, 800), Image.NEAREST)
+hangman_2 = Image.open("333x533 2guesses.jpg")
+hangman_2 = hangman_2.resize((333, 533), Image.NEAREST)
 hangman_2 = ImageTk.PhotoImage(hangman_2)
-hangman_1 = Image.open("500x800 1guesses.jpg")
-hangman_1 = hangman_1.resize((500, 800), Image.NEAREST)
+hangman_1 = Image.open("333x533 1guesses.jpg")
+hangman_1 = hangman_1.resize((333, 533), Image.NEAREST)
 hangman_1 = ImageTk.PhotoImage(hangman_1)
-hangman_0 = Image.open("500x800 0guesses.jpg")
-hangman_0 = hangman_0.resize((500, 800), Image.NEAREST)
+hangman_0 = Image.open("333x533 0guesses.jpg")
+hangman_0 = hangman_0.resize((333, 533), Image.NEAREST)
 hangman_0 = ImageTk.PhotoImage(hangman_0)
 hangman_img_label = tk.Label(master=frame_left,
                              image=hangman_6,
-                             width=500,
-                             height=800,)
+                             width=333,
+                             height=533,)
 word_label = tk.Label(master=frame_left,
                       fg=active_text_color,
                       bg=bg_color,
@@ -309,7 +306,7 @@ guesses_label = tk.Label(master=frame_left,
                          text="you have 6 guesses left",
                          font="Helvetica 20")
 
-frame_right = tk.Frame(master=game_frame, bg=bg_color)
+frame_right = tk.Frame(master=game_frame, bg=bg_color)  # TODO
 welcome_label = tk.Label(master=frame_right,
                          text="Welcome to Hangman!",
                          font="Helvetica 60 bold",
@@ -350,7 +347,7 @@ letters_frame = tk.Frame(master=frame_right,
                          relief=tk.SUNKEN,
                          bg=bg_color)
 
-reset_import_frame = tk.Frame(master=frame_right, bg=bg_color)
+reset_import_frame = tk.Frame(master=frame_right, bg=bg_color)   # TODO
 import_button = tk.Button(master=reset_import_frame,
                           text="Import\nWordlist",
                           font="Helvetica 20",
@@ -397,6 +394,40 @@ letters_frame.grid(row=5, column=0)
 reset_import_frame.grid(row=5, column=1, sticky="sw")
 import_button.grid(row=0, column=0, sticky="sw", pady=10)
 reset_button.grid(row=1, column=0, sticky="sw", pady=10)
+
+# config weight
+window.grid_columnconfigure(0, weight=1)
+window.grid_columnconfigure(1, weight=1)
+window.grid_rowconfigure(0, weight=1)
+game_frame.grid_columnconfigure(0, weight=1)
+game_frame.grid_columnconfigure(1, weight=1)
+game_frame.grid_rowconfigure(0, weight=1)
+frame_left.grid_columnconfigure(0, weight=1)
+frame_left.grid_rowconfigure(0, weight=1)
+frame_left.grid_rowconfigure(1, weight=1)
+frame_right.grid_columnconfigure(0, weight=1)
+frame_right.grid_columnconfigure(1, weight=1)
+frame_right.grid_rowconfigure(0, weight=1)
+frame_right.grid_rowconfigure(1, weight=1)
+frame_right.grid_rowconfigure(2, weight=1)
+frame_right.grid_rowconfigure(3, weight=1)
+frame_right.grid_rowconfigure(4, weight=1)
+frame_right.grid_rowconfigure(5, weight=1)
+letters_frame.grid_columnconfigure(0, weight=1)
+letters_frame.grid_columnconfigure(1, weight=1)
+letters_frame.grid_columnconfigure(2, weight=1)
+letters_frame.grid_columnconfigure(3, weight=1)
+letters_frame.grid_columnconfigure(4, weight=1)
+letters_frame.grid_columnconfigure(5, weight=1)
+letters_frame.grid_columnconfigure(6, weight=1)
+letters_frame.grid_columnconfigure(7, weight=1)
+letters_frame.grid_columnconfigure(8, weight=1)
+letters_frame.grid_rowconfigure(0, weight=1)
+letters_frame.grid_rowconfigure(1, weight=1)
+letters_frame.grid_rowconfigure(2, weight=1)
+reset_import_frame.grid_columnconfigure(0, weight=1)
+reset_import_frame.grid_rowconfigure(0, weight=1)
+reset_import_frame.grid_rowconfigure(1, weight=1)
 
 # create and grid letter buttons
 button_a = tk.Button(master=letters_frame,
@@ -716,7 +747,5 @@ letter_buttons_list = [button_a,
 
 window.mainloop()
 
-# TODO dynamic resizing OR smaller play window
-# option 2 go through and manually resize everything, add weight param
 # TODO add weights to widgets
-# TODO downsize images with background
+# use loop to config everything
