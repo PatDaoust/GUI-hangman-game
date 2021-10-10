@@ -718,4 +718,5 @@ window.mainloop()
 
 # TODO dynamic resizing OR smaller play window
 # option 1: Apply sticky='nsew' to all the widgets
-# option 2 go through and manually resize everything
+# option 2 go through and manually resize everything, add weight param
+# option 3 ???
